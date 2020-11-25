@@ -1,0 +1,40 @@
+Received: from 10.197.33.76
+ by atlas212.free.mail.bf1.yahoo.com with HTTP; Tue, 24 Nov 2020 03:32:40 +0000
+Return-Path: <any@mailfrom.notexist.cibc.com>
+Received: from 24.114.67.246 (EHLO helo.testdomaintest.company)
+ by 10.197.33.76 with SMTP; Tue, 24 Nov 2020 03:32:40 +0000
+X-Originating-Ip: [24.114.67.246]
+Received-SPF: none (domain of mailfrom.notexist.cibc.com does not designate permitted sender hosts)
+Authentication-Results: atlas212.free.mail.bf1.yahoo.com;
+ dkim=unknown;
+ spf=none smtp.mailfrom=mailfrom.notexist.cibc.com;
+ dmarc=success(p=NONE) header.from=cibc.com;
+X-Apparently-To: cis6510victim@yahoo.com; Tue, 24 Nov 2020 03:32:40 +0000
+X-YMailISG: WGXPFkIWLDtE.1sKenh4nmpWhjGb8cHpnbG7rxjvovPDWOX_
+ fAi_agZDqmNHMuT0jzaPM0GW_0mLrgo6Xc7s79o_rynoIg.RUiV.6H5Lzw2u
+ ERIhpApdXr8FWTnBTxYgGpTrg_usvkNEo8W7r8MPxfIJxGVmVriHe2H5NoCy
+ 7H_N5NZA7_GTVYFT1e1ppG0qAHTH1YX3w44GAVUO.OkC0PKnWJStiPtzicrB
+ tw92KotUEuX84QgQb3lZF0mFjYNeYCuQW5O78gcNa6oj8FYaBjOXna1SAJ59
+ BPIaZThOYGD2zLis.HzFuR93WLu9RjCzKAB9kX.Uli94ck1b_gpQiSnUBxJU
+ J01_Tos3aLNBFmqcPD4CLT7i9h60mWQaPTGQyFpt_E9xv9HaSfcx6_TszsG1
+ YTW4QhLrPsnRbPRptEFenzytNXpboyiRLjNy7RMhPgzFeFh19aPLBFptX3nM
+ znrkR8OcfkBK6.y3x_VEIyPhcna9IFRCPI1o35V2s6Yux0DcpI7z4aR6iPqR
+ ShLKE7YqdnqplghVVj.AZTxRrvCVt9V_ByucgQDsMvvnsnQOPXHsbL9qBxH6
+ 5hhO6jmlzlt.dvaflnWXGQVxnJOWFlQyOT6ZjlYEtuO3lLpCbjWCzepANwpl
+ BsU71K_wDdoHVY7UMIGdcV0HsB.S5LfOyccmoaI8uZJgQPLhqwa4jvQYDvqE
+ zole7mr0NM61m_AJbH38GfJnicHxTnVklIxd5eMxuzmFkZAkD6uYEgqnbG4q
+ Gt827Nqo_WPKRCVT4mjq7nmrVn3oCHe11a5CwapaVw4a7YAFxxHD5z5pLUqU
+ mIY4Dc.hGLqiBAWQuT_7nE1imehV8QG0poyZMlE1kyplRIGSl72vaNi5T.I3
+ mXZFEFDZG9D4z6__nclXYslyDHrEZhksmkdBafynij0MS4HkurxEt9QQTUmf
+ qmmAozF5HCQ-
+From: <security@cibc.com>
+To: <cis6510victim@yahoo.com>
+Subject: A1: Non-existent subdomain
+Date: Tue, 24 Nov 2020 03:32:34 +0000
+Content-Type: text/plain; charset="UTF-8"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-UH1SR8@message-ids.testdomaintest.company>
+X-Email-Client: https://github.com/chenjj/espoofer
+Content-Length: 42
+
+Hi, this is a test message! Best wishes.
