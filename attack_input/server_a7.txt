@@ -1,0 +1,40 @@
+Received: from 10.197.39.106
+ by atlas104.free.mail.bf1.yahoo.com with HTTP; Tue, 24 Nov 2020 04:08:50 +0000
+Return-Path: <@cibc.com,@any.com:'any@testdomaintest.company>
+Received: from 24.114.51.143 (EHLO testdomaintest.company)
+ by 10.197.39.106 with SMTP; Tue, 24 Nov 2020 04:08:50 +0000
+X-Originating-Ip: [24.114.51.143]
+Received-SPF: softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.143 as permitted sender)
+Authentication-Results: atlas104.free.mail.bf1.yahoo.com;
+ dkim=unknown;
+ spf=softfail smtp.mailfrom=testdomaintest.company;
+ dmarc=success(p=NONE) header.from=cibc.com;
+X-Apparently-To: cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:08:50 +0000
+X-YMailISG: r0mTy2cWLDt3nc7aldhV2bLmHgriCQQIO8XM54jzV34SAa2l
+ dH4FXaS0g5kX2Oloh3caSpxzOuJYeep3NjAVo_QpaZ4JS4wW08b8TEVZXbnu
+ Ji9wBRfmsyIEoOfE2dhMGlo56dsZVlZ8wu7QuURRUHTpjd4qfHcfoJI13v.a
+ AtoBDKrGbYypulIm596M1ogva2N2JQBB1ObZxVZuz_fFdketSP2wcXIqmsb7
+ PLAVFzOBdfEKTUycM94lmBWnUnDaPP2Nc43IeRXGVd06BlelyVMBEsyhd8pG
+ I9fxs4tti98hym7sNMnJS_vDvz8yRoZ0VQemZAoPU4MEej43qoZdl0xfQx66
+ cX8elCOeaqKcaHYpSvPpbXkWLI7ntZKYc_c2BySG4p1Cr1DIe64hvUJaYi.U
+ kb8IRt4hyHzS16r5ufvZQ1QwvSrPd4aO5iqnnid4lla9z5qbkUaCRVTzQ87Q
+ tj2ZsIFNyiVaKLIkBqB60dJq5bqmN1v1AUQQpGOvQDvm1.Fqy308XRcHJvFc
+ DaVXfvfn.EY6E8g4hVQHx_9DaeNEcMo5kyyIUd2W1YJg6duTVAmvQ.TzBEx8
+ V.m7wYA6nXeCAbzGRJcj2U8TIDGA46cQ3nBWhA5e6mGbDp1Lozrli4dJEtTj
+ Uuv1mqoyUDqkJDv1VEE5P6mHtAti_WJgW9gz7XJId5DVLg7fVKXoxRxhG4Oz
+ rXJQh_TEp4SbS9pnlurr62S7_6JiLpVvMN8QrjjO4sxCRxSVRIPunKcoSIK5
+ ocWioOBt2JYfBdns6hN16ZXm7y85QZUnEhSVUYjGLOo88vYKwwElyqfO9VEj
+ ujHJCMmCeuj1waHn89zqREv_W.k.o6pWkQKngVXcwoA3YtmXTj6XOZ3yODll
+ iEbnApnbaH1qFjSgv62zm6BgDYhT9B84qfH5fy1Lscai9uPpC5Pfj_sVL8NH
+ MA--
+From: <security@cibc.com>
+To: <cis6510victim@yahoo.com>
+Subject: A7: routing address in mailfrom
+Date: Tue, 24 Nov 2020 04:08:44 +0000
+Content-Type: text/plain; charset="UTF-8"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-3HZD0O@message-ids.testdomaintest.company>
+X-Email-Client: https://github.com/chenjj/espoofer
+Content-Length: 42
+
+Hi, this is a test message! Best wishes.

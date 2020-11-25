@@ -1,0 +1,41 @@
+Received: from 10.222.142.148
+ by atlas221.free.mail.ne1.yahoo.com with HTTP; Tue, 24 Nov 2020 04:16:54 +0000
+Return-Path: <any@testdomaintest.company>
+Received: from 24.114.51.127 (EHLO testdomaintest.company)
+ by 10.222.142.148 with SMTP; Tue, 24 Nov 2020 04:16:54 +0000
+X-Originating-Ip: [24.114.51.127]
+Received-SPF: softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.127 as permitted sender)
+Authentication-Results: atlas221.free.mail.ne1.yahoo.com;
+ dkim=unknown;
+ spf=softfail smtp.mailfrom=testdomaintest.company;
+ dmarc=unknown header.from=testdomaintest.company;
+X-Apparently-To: cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:16:54 +0000
+X-YMailISG: 4tKMaQgWLDs.1lLyYoG9jXWYOVrYff1TmF3a7WMPNhJqETYG
+ _h_E_rk.Szebg4z3ZAy4rL588yp5_fCcWbvz5qWNub0qitAm6GpDUtBUVoRT
+ DluHMGv3PK6SpdnR8rSgRWApOPMHs9J03nRjhWtstmu7NJ4ugBaHZcizS4hj
+ ZIP.l89Rv_unCFxkTnaVFhBdCs9JZ7xIewSXIGjAEiZt93uiST2AK1MycOU8
+ Miv7wcjr9BNupYlU8JdEqAqki.ZeBoMTeyRBoaXeU2nzYLRYcQccYZ.jcjgh
+ XbCG63Wn2cqw3Hp7L_qVHUVybezvxfrmsiT4299gxy8Uj.ORJYnQCYztq293
+ XeRtS5eYkfqA3ViRrGDdwglqw.sM5HH_DB.LWMqRpkycnrBYXi4Aj6tfPy7E
+ tulqDId9scRo.7q1B75w159Eq7Rrc_1W1tu8vFncEXajGBWYGnHXS.5S3kWa
+ CcYERVyvHrgzlt5CpigmMtvoEmefte5xw6mE2hkYOnIIM7UdIx5gjWlS702O
+ EFIkbFdlLQk_u_66tTLGnHNtnypGgLAmsHnKT44FyEu.qEYe.2RXDf5.sr5N
+ ovYNHAImeDzVgdICEhuqG47FeFrVKqw9mjCtI7Fjne43N8xXglJtaOlOW3lT
+ sgolwdnf7qjjQ95A5mozrSwBViHdmitK.ppTe6todHGRcpQl8WlEJhTp4oQQ
+ GvaNFkvGBIvR4Yxva8bURL9uamgG6CmQ0P9n3NIcyWmbx0m9Qp0uhnfeZlC6
+ GnVH6FoWcwxR68B7U2QLaEi0Oh3eHa.rcY3gRGlndnSWz.0LR.OVGG311pTO
+ mpIq3hhPx.cCoufLxF915hiIpg0YxKmau8ljvCgf1F922udjzIeKW_MWLuJN
+ oTQfkhojKTUNCyNcoXsUYlAkqUFreQukAAESDwe8dP_DTOnKGxVOrztt5RLD
+ _3s3E9hbcA_S7a1xc43bj1Fqyqoe
+From: <any@testdomaintest.company>security@cibc.com
+To: <cis6510victim@yahoo.com>
+Subject: A19: Display Name and real address parsing inconsistencies
+Date: Tue, 24 Nov 2020 04:16:47 +0000
+Sender: <s@sender.cibc.com>
+Content-Type: text/plain; charset="UTF-8"
+MIME-Version: 1.0
+Message-ID: <1538085644648.096e3d4e-bc38-4027-b57e-ZUQZH5@message-ids.testdomaintest.company>
+X-Email-Client: https://github.com/chenjj/espoofer
+Content-Length: 42
+
+Hi, this is a test message! Best wishes.
