@@ -1,32 +1,46 @@
 
 ----------------server_a1.txt-------------------------
 {
+    "content-length": "42",
+    "x-email-client": "https://github.com/chenjj/espoofer",
+    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-UH1SR8@message-ids.testdomaintest.company>",
     "return-path": {
         "full_return_path": "any@mailfrom.notexist.cibc.com",
         "return_path_wo_route_portion": "any@mailfrom.notexist.cibc.com",
         "return_path_domain": "mailfrom.notexist.cibc.com"
     },
-    "x-ymailisg": "WGXPFkIWLDtE.1sKenh4nmpWhjGb8cHpnbG7rxjvovPDWOX_\n fAi_agZDqmNHMuT0jzaPM0GW_0mLrgo6Xc7s79o_rynoIg.RUiV.6H5Lzw2u\n ERIhpApdXr8FWTnBTxYgGpTrg_usvkNEo8W7r8MPxfIJxGVmVriHe2H5NoCy\n 7H_N5NZA7_GTVYFT1e1ppG0qAHTH1YX3w44GAVUO.OkC0PKnWJStiPtzicrB\n tw92KotUEuX84QgQb3lZF0mFjYNeYCuQW5O78gcNa6oj8FYaBjOXna1SAJ59\n BPIaZThOYGD2zLis.HzFuR93WLu9RjCzKAB9kX.Uli94ck1b_gpQiSnUBxJU\n J01_Tos3aLNBFmqcPD4CLT7i9h60mWQaPTGQyFpt_E9xv9HaSfcx6_TszsG1\n YTW4QhLrPsnRbPRptEFenzytNXpboyiRLjNy7RMhPgzFeFh19aPLBFptX3nM\n znrkR8OcfkBK6.y3x_VEIyPhcna9IFRCPI1o35V2s6Yux0DcpI7z4aR6iPqR\n ShLKE7YqdnqplghVVj.AZTxRrvCVt9V_ByucgQDsMvvnsnQOPXHsbL9qBxH6\n 5hhO6jmlzlt.dvaflnWXGQVxnJOWFlQyOT6ZjlYEtuO3lLpCbjWCzepANwpl\n BsU71K_wDdoHVY7UMIGdcV0HsB.S5LfOyccmoaI8uZJgQPLhqwa4jvQYDvqE\n zole7mr0NM61m_AJbH38GfJnicHxTnVklIxd5eMxuzmFkZAkD6uYEgqnbG4q\n Gt827Nqo_WPKRCVT4mjq7nmrVn3oCHe11a5CwapaVw4a7YAFxxHD5z5pLUqU\n mIY4Dc.hGLqiBAWQuT_7nE1imehV8QG0poyZMlE1kyplRIGSl72vaNi5T.I3\n mXZFEFDZG9D4z6__nclXYslyDHrEZhksmkdBafynij0MS4HkurxEt9QQTUmf\n qmmAozF5HCQ-",
-    "x-email-client": "https://github.com/chenjj/espoofer",
-    "mime-version": "1.0",
-    "content-length": "42",
-    "body": "Hi, this is a test message! Best wishes.",
-    "timezone": "+0.0",
-    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 03:32:40 +0000",
+    "authentication-results": {
+        "dkim": {
+            "result": "unknown"
+        },
+        "spf": {
+            "result": "none",
+            "info": {
+                "field": "smtp.mailfrom",
+                "value": "mailfrom.notexist.cibc.com"
+            }
+        },
+        "dmarc": {
+            "result": "success(p=NONE)",
+            "info": {
+                "field": "header.from",
+                "value": "cibc.com"
+            }
+        }
+    },
     "date": "2020-11-24T03:32:34",
-    "received-spf": "none (domain of mailfrom.notexist.cibc.com does not designate permitted sender hosts)",
-    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-UH1SR8@message-ids.testdomaintest.company>",
-    "to": [
-        "cis6510victim@yahoo.com"
+    "body": "Hi, this is a test message! Best wishes.",
+    "to_domains": [
+        "yahoo.com"
     ],
-    "content-type": "text/plain; charset=\"UTF-8\"",
+    "received-spf": "none (domain of mailfrom.notexist.cibc.com does not designate permitted sender hosts)",
+    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 03:32:40 +0000",
+    "mime-version": "1.0",
+    "timezone": "+0.0",
     "x-originating-ip": "[24.114.67.246]",
     "received": {
         "SMTP": {
-            "from": {
-                "full_ehlo": "24.114.67.246 EHLO helo.testdomaintest.company",
-                "domain": "testdomaintest.company"
-            },
+            "from": "24.114.67.246 EHLO helo.testdomaintest.company",
             "by": "10.197.33.76",
             "with": "SMTP",
             "date": "Tue, 24 Nov 2020 03:32:40 +0000",
@@ -44,26 +58,15 @@
             "delay": 0.0
         }
     },
+    "x-ymailisg": "WGXPFkIWLDtE.1sKenh4nmpWhjGb8cHpnbG7rxjvovPDWOX_\n fAi_agZDqmNHMuT0jzaPM0GW_0mLrgo6Xc7s79o_rynoIg.RUiV.6H5Lzw2u\n ERIhpApdXr8FWTnBTxYgGpTrg_usvkNEo8W7r8MPxfIJxGVmVriHe2H5NoCy\n 7H_N5NZA7_GTVYFT1e1ppG0qAHTH1YX3w44GAVUO.OkC0PKnWJStiPtzicrB\n tw92KotUEuX84QgQb3lZF0mFjYNeYCuQW5O78gcNa6oj8FYaBjOXna1SAJ59\n BPIaZThOYGD2zLis.HzFuR93WLu9RjCzKAB9kX.Uli94ck1b_gpQiSnUBxJU\n J01_Tos3aLNBFmqcPD4CLT7i9h60mWQaPTGQyFpt_E9xv9HaSfcx6_TszsG1\n YTW4QhLrPsnRbPRptEFenzytNXpboyiRLjNy7RMhPgzFeFh19aPLBFptX3nM\n znrkR8OcfkBK6.y3x_VEIyPhcna9IFRCPI1o35V2s6Yux0DcpI7z4aR6iPqR\n ShLKE7YqdnqplghVVj.AZTxRrvCVt9V_ByucgQDsMvvnsnQOPXHsbL9qBxH6\n 5hhO6jmlzlt.dvaflnWXGQVxnJOWFlQyOT6ZjlYEtuO3lLpCbjWCzepANwpl\n BsU71K_wDdoHVY7UMIGdcV0HsB.S5LfOyccmoaI8uZJgQPLhqwa4jvQYDvqE\n zole7mr0NM61m_AJbH38GfJnicHxTnVklIxd5eMxuzmFkZAkD6uYEgqnbG4q\n Gt827Nqo_WPKRCVT4mjq7nmrVn3oCHe11a5CwapaVw4a7YAFxxHD5z5pLUqU\n mIY4Dc.hGLqiBAWQuT_7nE1imehV8QG0poyZMlE1kyplRIGSl72vaNi5T.I3\n mXZFEFDZG9D4z6__nclXYslyDHrEZhksmkdBafynij0MS4HkurxEt9QQTUmf\n qmmAozF5HCQ-",
+    "content-type": "text/plain; charset=\"UTF-8\"",
+    "to": [
+        "cis6510victim@yahoo.com"
+    ],
     "subject": "A1: Non-existent subdomain",
     "from": [
         "security@cibc.com"
     ],
-    "to_domains": [
-        "yahoo.com"
-    ],
-    "authentication-results": {
-        "dkim": {
-            "result": "unknown"
-        },
-        "spf": {
-            "result": "none",
-            "info": "smtp.mailfrom=mailfrom.notexist.cibc.com"
-        },
-        "dmarc": {
-            "result": "success(p=NONE)",
-            "info": "header.from=cibc.com"
-        }
-    },
     "has_defects": false
 }
 ------------------------------------------------
@@ -71,33 +74,47 @@
 
 ----------------server_a4.txt-------------------------
 {
+    "content-length": "42",
+    "x-email-client": "https://github.com/chenjj/espoofer",
+    "dkim-signature": "v=1; a=rsa-sha256; c=simple/relaxed;\n d=cibc.com'a.testdomaintest.company;\n i=@cibc.com'a.testdomaintest.company; q=dns/txt; s=selector;\n t=1606190891; h=from; bh=D4dKLoV2nbWSqjUdWgZ8Qj91haAqq0mxSF3sbZt3JBg=;\n b=QCK8EquaXXOnQHSDjFThlvjWcJc2jtfXZLwEAhPFg5K6JBUN5VUUW3sK2+yhmwENtAihN\n tFV+oncK6JY2H1ljQYC5HavrlQcFsabuiV3kTUwRFZx4Z9xFuVUPUfM1t7iYqQdKEwiZR7u\n 8ALor6tR3J1T1S/WkhJ5lNd33XyLQ04=",
+    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-B7ADQY@message-ids.testdomaintest.company>",
     "return-path": {
         "full_return_path": "any@testdomaintest.company",
         "return_path_wo_route_portion": "any@testdomaintest.company",
         "return_path_domain": "testdomaintest.company"
     },
-    "x-ymailisg": "J3Mm8c4WLDsUVi8l3_ig4xJH433qVI3jBf_trtj2HfLUlBBU\n JgXfeyHEfa7eTrJWHhUw._g.6pdQCX.m169HLUG02LHgfSu8OBr0I9wFbygM\n nCtmurP8lf_EyoSoODNT1gAAz_3q66vTkkPzOcv9p8KZ24iRdbZFMxXZCeo7\n SVF.ioelrU9ckeNmJT6cr5NDwoZ_DemtMOczkSEoGLGVM80BUr6I51m9t8SP\n v8N5Iqtl9k4Tlu7hHCVUTzRj7xCqh0Uw36_dVfsJWoJcsX9uvd8BEX9hGz4U\n pIX4iDfMhK4sh3itcyX4LxJ2dJgImRF_4.Vne0YH7RQMk5fGD23MCOdKamXF\n EXMJ9Vs4VUwq3ciDAmdVaa.43qrgnuf.D3PvDxC9YdGC3lssH2l6fdscyXyf\n XuF7FKg81SPQ2TrBztBELDOu.D8sBp_SGzcUl0J9QSz8QXNm.GdUiW_c4Tek\n sclLKIApIuznrYTvGWBWVi8VEX5Dv4VHCFqBLRMM6wQvNkIszHaZrrhlB6gs\n b797gjaoHy7.8K8ogpr2yPMmFOyquq3ICBqNCnR5ysNtWQnqqa3dx9ZKgyAN\n gSn05pVwg6ete_w11xx8A8_aYAFgY5gphtqzf6w.xJJwlOZMjd94Pt5NWMBu\n R8L.flTRXyUhiF0juasdFq8jnwV2Mot2OedsYCLyuS8MLbhmaH21Fc_GBebg\n ebvyS53aa_2MhI1FzSnsV673PSmIlKqnuvIrjpavDLjEaghVZpw7fu8MThFN\n L2xhcUWjIdsozdzuyFaWaolzDLAIpDIJsooXb5QL4gd99KQHcddE4oz8nKrJ\n GL3yBKaqJwLuqfHULwME3zMOoL.K52J9gFamS8d3Y0xA7zi4ni.cPZpg5GLy\n HrsnjZWVt1ZLEzROf.XMdCEX3rv9qXQEdR3tKJ1j7JG4USwiMGRCrVL9PUwk\n fM9m7slLcaO5.kQaKjDimYgMa_rr0v3vB6rE",
-    "x-email-client": "https://github.com/chenjj/espoofer",
-    "dkim-signature": "v=1; a=rsa-sha256; c=simple/relaxed;\n d=cibc.com'a.testdomaintest.company;\n i=@cibc.com'a.testdomaintest.company; q=dns/txt; s=selector;\n t=1606190891; h=from; bh=D4dKLoV2nbWSqjUdWgZ8Qj91haAqq0mxSF3sbZt3JBg=;\n b=QCK8EquaXXOnQHSDjFThlvjWcJc2jtfXZLwEAhPFg5K6JBUN5VUUW3sK2+yhmwENtAihN\n tFV+oncK6JY2H1ljQYC5HavrlQcFsabuiV3kTUwRFZx4Z9xFuVUPUfM1t7iYqQdKEwiZR7u\n 8ALor6tR3J1T1S/WkhJ5lNd33XyLQ04=",
-    "mime-version": "1.0",
-    "body": "Hi, this is a test message! Best wishes.",
-    "timezone": "+0.0",
-    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:08:17 +0000",
+    "authentication-results": {
+        "dkim": {
+            "result": "perm_fail"
+        },
+        "spf": {
+            "result": "softfail",
+            "info": {
+                "field": "smtp.mailfrom",
+                "value": "testdomaintest.company"
+            }
+        },
+        "dmarc": {
+            "result": "success(p=NONE)",
+            "info": {
+                "field": "header.from",
+                "value": "cibc.com"
+            }
+        }
+    },
     "date": "2020-11-24T04:08:10",
-    "content-length": "42",
-    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.143 as permitted sender)",
-    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-B7ADQY@message-ids.testdomaintest.company>",
-    "to": [
-        "cis6510victim@yahoo.com"
+    "body": "Hi, this is a test message! Best wishes.",
+    "to_domains": [
+        "yahoo.com"
     ],
-    "content-type": "multipart/alternative; boundary=\"001a113db9c28077e7054ee99e9c\"",
+    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.143 as permitted sender)",
+    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:08:17 +0000",
+    "mime-version": "1.0",
+    "timezone": "+0.0",
     "x-originating-ip": "[24.114.51.143]",
     "received": {
         "SMTP": {
-            "from": {
-                "full_ehlo": "24.114.51.143 EHLO testdomaintest.company",
-                "domain": ""
-            },
+            "from": "24.114.51.143 EHLO testdomaintest.company",
             "by": "10.197.39.201",
             "with": "SMTP",
             "date": "Tue, 24 Nov 2020 04:08:17 +0000",
@@ -115,26 +132,15 @@
             "delay": 0.0
         }
     },
+    "x-ymailisg": "J3Mm8c4WLDsUVi8l3_ig4xJH433qVI3jBf_trtj2HfLUlBBU\n JgXfeyHEfa7eTrJWHhUw._g.6pdQCX.m169HLUG02LHgfSu8OBr0I9wFbygM\n nCtmurP8lf_EyoSoODNT1gAAz_3q66vTkkPzOcv9p8KZ24iRdbZFMxXZCeo7\n SVF.ioelrU9ckeNmJT6cr5NDwoZ_DemtMOczkSEoGLGVM80BUr6I51m9t8SP\n v8N5Iqtl9k4Tlu7hHCVUTzRj7xCqh0Uw36_dVfsJWoJcsX9uvd8BEX9hGz4U\n pIX4iDfMhK4sh3itcyX4LxJ2dJgImRF_4.Vne0YH7RQMk5fGD23MCOdKamXF\n EXMJ9Vs4VUwq3ciDAmdVaa.43qrgnuf.D3PvDxC9YdGC3lssH2l6fdscyXyf\n XuF7FKg81SPQ2TrBztBELDOu.D8sBp_SGzcUl0J9QSz8QXNm.GdUiW_c4Tek\n sclLKIApIuznrYTvGWBWVi8VEX5Dv4VHCFqBLRMM6wQvNkIszHaZrrhlB6gs\n b797gjaoHy7.8K8ogpr2yPMmFOyquq3ICBqNCnR5ysNtWQnqqa3dx9ZKgyAN\n gSn05pVwg6ete_w11xx8A8_aYAFgY5gphtqzf6w.xJJwlOZMjd94Pt5NWMBu\n R8L.flTRXyUhiF0juasdFq8jnwV2Mot2OedsYCLyuS8MLbhmaH21Fc_GBebg\n ebvyS53aa_2MhI1FzSnsV673PSmIlKqnuvIrjpavDLjEaghVZpw7fu8MThFN\n L2xhcUWjIdsozdzuyFaWaolzDLAIpDIJsooXb5QL4gd99KQHcddE4oz8nKrJ\n GL3yBKaqJwLuqfHULwME3zMOoL.K52J9gFamS8d3Y0xA7zi4ni.cPZpg5GLy\n HrsnjZWVt1ZLEzROf.XMdCEX3rv9qXQEdR3tKJ1j7JG4USwiMGRCrVL9PUwk\n fM9m7slLcaO5.kQaKjDimYgMa_rr0v3vB6rE",
+    "content-type": "multipart/alternative; boundary=\"001a113db9c28077e7054ee99e9c\"",
+    "to": [
+        "cis6510victim@yahoo.com"
+    ],
     "subject": "A4: DKIM authentication results injection using single quote",
     "from": [
         "security@cibc.com"
     ],
-    "to_domains": [
-        "yahoo.com"
-    ],
-    "authentication-results": {
-        "dkim": {
-            "result": "perm_fail"
-        },
-        "spf": {
-            "result": "softfail",
-            "info": "smtp.mailfrom=testdomaintest.company"
-        },
-        "dmarc": {
-            "result": "success(p=NONE)",
-            "info": "header.from=cibc.com"
-        }
-    },
     "has_defects": true,
     "defects": [
         {
@@ -154,32 +160,46 @@
 
 ----------------server_a7.txt-------------------------
 {
+    "content-length": "42",
+    "x-email-client": "https://github.com/chenjj/espoofer",
+    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-3HZD0O@message-ids.testdomaintest.company>",
     "return-path": {
         "full_return_path": "@cibc.com,@any.com:'any@testdomaintest.company",
         "return_path_wo_route_portion": "'any@testdomaintest.company",
         "return_path_domain": "testdomaintest.company"
     },
-    "x-ymailisg": "r0mTy2cWLDt3nc7aldhV2bLmHgriCQQIO8XM54jzV34SAa2l\n dH4FXaS0g5kX2Oloh3caSpxzOuJYeep3NjAVo_QpaZ4JS4wW08b8TEVZXbnu\n Ji9wBRfmsyIEoOfE2dhMGlo56dsZVlZ8wu7QuURRUHTpjd4qfHcfoJI13v.a\n AtoBDKrGbYypulIm596M1ogva2N2JQBB1ObZxVZuz_fFdketSP2wcXIqmsb7\n PLAVFzOBdfEKTUycM94lmBWnUnDaPP2Nc43IeRXGVd06BlelyVMBEsyhd8pG\n I9fxs4tti98hym7sNMnJS_vDvz8yRoZ0VQemZAoPU4MEej43qoZdl0xfQx66\n cX8elCOeaqKcaHYpSvPpbXkWLI7ntZKYc_c2BySG4p1Cr1DIe64hvUJaYi.U\n kb8IRt4hyHzS16r5ufvZQ1QwvSrPd4aO5iqnnid4lla9z5qbkUaCRVTzQ87Q\n tj2ZsIFNyiVaKLIkBqB60dJq5bqmN1v1AUQQpGOvQDvm1.Fqy308XRcHJvFc\n DaVXfvfn.EY6E8g4hVQHx_9DaeNEcMo5kyyIUd2W1YJg6duTVAmvQ.TzBEx8\n V.m7wYA6nXeCAbzGRJcj2U8TIDGA46cQ3nBWhA5e6mGbDp1Lozrli4dJEtTj\n Uuv1mqoyUDqkJDv1VEE5P6mHtAti_WJgW9gz7XJId5DVLg7fVKXoxRxhG4Oz\n rXJQh_TEp4SbS9pnlurr62S7_6JiLpVvMN8QrjjO4sxCRxSVRIPunKcoSIK5\n ocWioOBt2JYfBdns6hN16ZXm7y85QZUnEhSVUYjGLOo88vYKwwElyqfO9VEj\n ujHJCMmCeuj1waHn89zqREv_W.k.o6pWkQKngVXcwoA3YtmXTj6XOZ3yODll\n iEbnApnbaH1qFjSgv62zm6BgDYhT9B84qfH5fy1Lscai9uPpC5Pfj_sVL8NH\n MA--",
-    "x-email-client": "https://github.com/chenjj/espoofer",
-    "mime-version": "1.0",
-    "content-length": "42",
-    "body": "Hi, this is a test message! Best wishes.",
-    "timezone": "+0.0",
-    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:08:50 +0000",
+    "authentication-results": {
+        "dkim": {
+            "result": "unknown"
+        },
+        "spf": {
+            "result": "softfail",
+            "info": {
+                "field": "smtp.mailfrom",
+                "value": "testdomaintest.company"
+            }
+        },
+        "dmarc": {
+            "result": "success(p=NONE)",
+            "info": {
+                "field": "header.from",
+                "value": "cibc.com"
+            }
+        }
+    },
     "date": "2020-11-24T04:08:44",
-    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.143 as permitted sender)",
-    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-3HZD0O@message-ids.testdomaintest.company>",
-    "to": [
-        "cis6510victim@yahoo.com"
+    "body": "Hi, this is a test message! Best wishes.",
+    "to_domains": [
+        "yahoo.com"
     ],
-    "content-type": "text/plain; charset=\"UTF-8\"",
+    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.143 as permitted sender)",
+    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:08:50 +0000",
+    "mime-version": "1.0",
+    "timezone": "+0.0",
     "x-originating-ip": "[24.114.51.143]",
     "received": {
         "SMTP": {
-            "from": {
-                "full_ehlo": "24.114.51.143 EHLO testdomaintest.company",
-                "domain": ""
-            },
+            "from": "24.114.51.143 EHLO testdomaintest.company",
             "by": "10.197.39.106",
             "with": "SMTP",
             "date": "Tue, 24 Nov 2020 04:08:50 +0000",
@@ -197,26 +217,15 @@
             "delay": 0.0
         }
     },
+    "x-ymailisg": "r0mTy2cWLDt3nc7aldhV2bLmHgriCQQIO8XM54jzV34SAa2l\n dH4FXaS0g5kX2Oloh3caSpxzOuJYeep3NjAVo_QpaZ4JS4wW08b8TEVZXbnu\n Ji9wBRfmsyIEoOfE2dhMGlo56dsZVlZ8wu7QuURRUHTpjd4qfHcfoJI13v.a\n AtoBDKrGbYypulIm596M1ogva2N2JQBB1ObZxVZuz_fFdketSP2wcXIqmsb7\n PLAVFzOBdfEKTUycM94lmBWnUnDaPP2Nc43IeRXGVd06BlelyVMBEsyhd8pG\n I9fxs4tti98hym7sNMnJS_vDvz8yRoZ0VQemZAoPU4MEej43qoZdl0xfQx66\n cX8elCOeaqKcaHYpSvPpbXkWLI7ntZKYc_c2BySG4p1Cr1DIe64hvUJaYi.U\n kb8IRt4hyHzS16r5ufvZQ1QwvSrPd4aO5iqnnid4lla9z5qbkUaCRVTzQ87Q\n tj2ZsIFNyiVaKLIkBqB60dJq5bqmN1v1AUQQpGOvQDvm1.Fqy308XRcHJvFc\n DaVXfvfn.EY6E8g4hVQHx_9DaeNEcMo5kyyIUd2W1YJg6duTVAmvQ.TzBEx8\n V.m7wYA6nXeCAbzGRJcj2U8TIDGA46cQ3nBWhA5e6mGbDp1Lozrli4dJEtTj\n Uuv1mqoyUDqkJDv1VEE5P6mHtAti_WJgW9gz7XJId5DVLg7fVKXoxRxhG4Oz\n rXJQh_TEp4SbS9pnlurr62S7_6JiLpVvMN8QrjjO4sxCRxSVRIPunKcoSIK5\n ocWioOBt2JYfBdns6hN16ZXm7y85QZUnEhSVUYjGLOo88vYKwwElyqfO9VEj\n ujHJCMmCeuj1waHn89zqREv_W.k.o6pWkQKngVXcwoA3YtmXTj6XOZ3yODll\n iEbnApnbaH1qFjSgv62zm6BgDYhT9B84qfH5fy1Lscai9uPpC5Pfj_sVL8NH\n MA--",
+    "content-type": "text/plain; charset=\"UTF-8\"",
+    "to": [
+        "cis6510victim@yahoo.com"
+    ],
     "subject": "A7: routing address in mailfrom",
     "from": [
         "security@cibc.com"
     ],
-    "to_domains": [
-        "yahoo.com"
-    ],
-    "authentication-results": {
-        "dkim": {
-            "result": "unknown"
-        },
-        "spf": {
-            "result": "softfail",
-            "info": "smtp.mailfrom=testdomaintest.company"
-        },
-        "dmarc": {
-            "result": "success(p=NONE)",
-            "info": "header.from=cibc.com"
-        }
-    },
     "has_defects": false
 }
 ------------------------------------------------
@@ -224,33 +233,46 @@
 
 ----------------server_a15.txt-------------------------
 {
+    "content-length": "42",
+    "x-email-client": "https://github.com/chenjj/espoofer",
+    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-GF48GE@message-ids.testdomaintest.company>",
     "return-path": {
         "full_return_path": "any@testdomaintest.company",
         "return_path_wo_route_portion": "any@testdomaintest.company",
         "return_path_domain": "testdomaintest.company"
     },
-    "x-ymailisg": "iyMZ8wcWLDtx8OlteGNKEhBPust1OceiK9rDmleU7m1o4fw0\n yZ.Gu1grVhF.tPMQXKxLHPMqYQDqLcQcj5lgOHhI5FkEgkyg7UuBFzH.L_N.\n TB_ohQ_ivi2e3EvkKWzF2uxb9Ivy2VwLvvyF89ygeXpm5gqdpGYX.1e4JCYS\n qX3ehWgtxPrKvfdQ2Sb4EWdna5UazIcpzwGisxj68vEk7se7PLQF66yf54yM\n fnPsVJa1wNnn1w72zhEzIEo02wFPzjeR0gujVMcdRXaXCGWd1Zahxjwvpt96\n 9LhzLNNxNqm7xhovEMFfsDrSwMzwWD6HonzGRCNXpUtvPW2.W.qjcDpWyE_L\n nMPbn6PS_XWyt8Grv4TofCnGapzYYd1c6V0gRYSpW40EkDCoCQVDBRVSp85x\n .WJsOkem6JRjaAKeD31ohv6ccLxjpOkH0tsKXJu8tLpgeqOLPXkZe6PW6DVI\n U21HOushpjkvnnOmN1rrFs6WVzV0tR9vySnTjG9_mXNtO6tbuAveV95nmJkd\n pZ0nQwVmBW.F1Dgy7iRj6uWHro76G_6DK077PlmAzewyxoUCb8sxaNrwiAoU\n 1yfz1not7DhNf6D7orBUAhymvTZSYgMomCqjDYUemSQG2B9B4Xx1NgQ7YxP5\n UxBjs58VhwIEignWYYmmicIeqCFMDepCTmp81qTrlxXe8KZIimF.pyI.E4Dw\n 71WXyJM9Lr0qWsY5CV6uDFVAlrHutYiwrjYVWndBTdf9iTXG81Igf5iXuHb3\n w._TOQbkzP22aQ6cEGciQaEmjRdz6AA_iThYdzP1V4iiLGEypxjaoIN5Iea5\n DlHP2S24xkePyP1Ha3K92eUi4qG_jjdVB2qPrsd7D17n3.cK5nPVGhcleFYa\n xdrCJmVh0UE78jaWmyiGFiictsKIxR0s0PP1FcxBbSCZunh2AeM_FbAxKZ6v\n Zu4qIosyAzU6QiTg4xUXnlJNOkS.3.XKyIM8EKQv.IpZG_y2RSImSUGvibhz\n mp0ry.75",
-    "mime-version": "1.0",
-    "x-email-client": "https://github.com/chenjj/espoofer",
-    "content-length": "42",
-    "body": "Hi, this is a test message! Best wishes.",
-    "timezone": "+0.0",
-    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:14:52 +0000",
+    "authentication-results": {
+        "dkim": {
+            "result": "unknown"
+        },
+        "spf": {
+            "result": "softfail",
+            "info": {
+                "field": "smtp.mailfrom",
+                "value": "testdomaintest.company"
+            }
+        },
+        "dmarc": {
+            "result": "unknown",
+            "info": {
+                "field": "header.from",
+                "value": "<admin@legitimate.com>"
+            }
+        }
+    },
     "date": "2020-11-24T04:14:44",
-    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.127 as permitted sender)",
-    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-GF48GE@message-ids.testdomaintest.company>",
-    "to": [
-        "cis6510victim@yahoo.com"
+    "body": "Hi, this is a test message! Best wishes.",
+    "to_domains": [
+        "yahoo.com"
     ],
-    "content-type": "text/plain; charset=\"UTF-8\"",
-    "sender": "<s@sender.cibc.com>",
+    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.127 as permitted sender)",
+    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:14:52 +0000",
+    "mime-version": "1.0",
+    "timezone": "+0.0",
     "x-originating-ip": "[24.114.51.127]",
     "received": {
         "SMTP": {
-            "from": {
-                "full_ehlo": "24.114.51.127 EHLO testdomaintest.company",
-                "domain": ""
-            },
+            "from": "24.114.51.127 EHLO testdomaintest.company",
             "by": "10.217.150.203",
             "with": "SMTP",
             "date": "Tue, 24 Nov 2020 04:14:52 +0000",
@@ -268,26 +290,17 @@
             "delay": 0.0
         }
     },
+    "x-ymailisg": "iyMZ8wcWLDtx8OlteGNKEhBPust1OceiK9rDmleU7m1o4fw0\n yZ.Gu1grVhF.tPMQXKxLHPMqYQDqLcQcj5lgOHhI5FkEgkyg7UuBFzH.L_N.\n TB_ohQ_ivi2e3EvkKWzF2uxb9Ivy2VwLvvyF89ygeXpm5gqdpGYX.1e4JCYS\n qX3ehWgtxPrKvfdQ2Sb4EWdna5UazIcpzwGisxj68vEk7se7PLQF66yf54yM\n fnPsVJa1wNnn1w72zhEzIEo02wFPzjeR0gujVMcdRXaXCGWd1Zahxjwvpt96\n 9LhzLNNxNqm7xhovEMFfsDrSwMzwWD6HonzGRCNXpUtvPW2.W.qjcDpWyE_L\n nMPbn6PS_XWyt8Grv4TofCnGapzYYd1c6V0gRYSpW40EkDCoCQVDBRVSp85x\n .WJsOkem6JRjaAKeD31ohv6ccLxjpOkH0tsKXJu8tLpgeqOLPXkZe6PW6DVI\n U21HOushpjkvnnOmN1rrFs6WVzV0tR9vySnTjG9_mXNtO6tbuAveV95nmJkd\n pZ0nQwVmBW.F1Dgy7iRj6uWHro76G_6DK077PlmAzewyxoUCb8sxaNrwiAoU\n 1yfz1not7DhNf6D7orBUAhymvTZSYgMomCqjDYUemSQG2B9B4Xx1NgQ7YxP5\n UxBjs58VhwIEignWYYmmicIeqCFMDepCTmp81qTrlxXe8KZIimF.pyI.E4Dw\n 71WXyJM9Lr0qWsY5CV6uDFVAlrHutYiwrjYVWndBTdf9iTXG81Igf5iXuHb3\n w._TOQbkzP22aQ6cEGciQaEmjRdz6AA_iThYdzP1V4iiLGEypxjaoIN5Iea5\n DlHP2S24xkePyP1Ha3K92eUi4qG_jjdVB2qPrsd7D17n3.cK5nPVGhcleFYa\n xdrCJmVh0UE78jaWmyiGFiictsKIxR0s0PP1FcxBbSCZunh2AeM_FbAxKZ6v\n Zu4qIosyAzU6QiTg4xUXnlJNOkS.3.XKyIM8EKQv.IpZG_y2RSImSUGvibhz\n mp0ry.75",
+    "content-type": "text/plain; charset=\"UTF-8\"",
+    "to": [
+        "cis6510victim@yahoo.com"
+    ],
     "subject": "A15: Email address encoding",
+    "sender": "<s@sender.cibc.com>",
     "from": [
         "admin@legitimate.com",
         "second@testdomaintest.company"
     ],
-    "to_domains": [
-        "yahoo.com"
-    ],
-    "authentication-results": {
-        "dkim": {
-            "result": "unknown;"
-        },
-        "spf": {
-            "result": "softfail"
-        },
-        "dmarc": {
-            "result": "unknown",
-            "info": "header.from=<admin@legitimate.com>"
-        }
-    },
     "has_defects": false
 }
 ------------------------------------------------
@@ -295,33 +308,46 @@
 
 ----------------server_a16.txt-------------------------
 {
+    "content-length": "42",
+    "x-email-client": "https://github.com/chenjj/espoofer",
+    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-SAK23U@message-ids.testdomaintest.company>",
     "return-path": {
         "full_return_path": "any@testdomaintest.company",
         "return_path_wo_route_portion": "any@testdomaintest.company",
         "return_path_domain": "testdomaintest.company"
     },
-    "x-ymailisg": "OM5r5a4WLDs79Dbp2480AnesLIhKztxBOSgRBlQolyTmA6qQ\n C0KDgb1kIKud6kwMNsNxYc97uQHkafHc9mg6p8ZHPvauCiECnstnE7dZbF.j\n DHkvcN1FPuSXVoqxaGRQBL4gTd3pHy8wLHS2BhVkGPCn_LNtlbmgTlhLNvPL\n 1TMTvG.HzH7XF3Q6g5TdeVCw473RAxD4VPVCEutOOOJ5pqFz4RtqrLJ5v6Pg\n 5YjEPIqmu8iwcR9Bb7oNr_bMMgWJ1OZD4T7cm37g_oWwmM5mslyP_nsqQN2F\n V89F2dK4Pon_4d4o1.xR5ZbTkb5LEmqQB6.AOEGgS4sAXU9CVjXI68WkX8iU\n 8puNSi3JKD9HLj.cF_9KBrmz.O3eb1TGHC3IDhBaQE5Miz2wgWYHX0ixAbNu\n .GGM8p0bDEoOswPTOE9zhl5S.UA_kgILKYA27e32MrMvHQb2F8hrSp_69JfO\n dsKoA1yt0mOjS2Prc3OG7F95TqztWZoewrRZ0TMG6PfaOWdnoG4iHIxa4t1h\n gpfes9v2A0v4XLZxjOTXgIqw9bdbLZ8Ca6BUwlXv43avB7H4hoD_GWon87qa\n eRTLy9_YKkSkKPs3oFyV_3rzMHTHSWu8Jrl041SeppWsRq9VoQ1NaWgVMp6I\n MHqcG3ShFyBfUcQJRQZD5mDhP2.9wsNbIQ9Cx3PK4OXNUo6eT.9ewNfvuwuo\n 83IHDPBwOXIrK3fV3J0ms7fKyaWuJyFa4R1EXFq.uOf7l0vODUSOdAE5MXs4\n O7h1eqF6ATVQwSZ68LsT2k2ZBjoRG2yJ0_Bl85vsgm3jyFtzqvXLd32SM07p\n 7K1f59jPGpehiMazXyn3.t8bScwRX1U66CFgeqWky19XXXH49Wa5sH_3Rqa6\n qQQZITn81vlc06lu8WA1QE4ECI_znCIEjqL_pJteOy71PENMElcGJxARQAGY\n 02i8zp7SGiZh4JHRo.rCsyJVddM-",
-    "mime-version": "1.0",
-    "x-email-client": "https://github.com/chenjj/espoofer",
-    "content-length": "42",
-    "body": "Hi, this is a test message! Best wishes.",
-    "timezone": "+0.0",
-    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:15:28 +0000",
+    "authentication-results": {
+        "dkim": {
+            "result": "unknown"
+        },
+        "spf": {
+            "result": "softfail",
+            "info": {
+                "field": "smtp.mailfrom",
+                "value": "testdomaintest.company"
+            }
+        },
+        "dmarc": {
+            "result": "success(p=NONE)",
+            "info": {
+                "field": "header.from",
+                "value": "cibc.com"
+            }
+        }
+    },
     "date": "2020-11-24T04:15:22",
-    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.127 as permitted sender)",
-    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-SAK23U@message-ids.testdomaintest.company>",
-    "to": [
-        "cis6510victim@yahoo.com"
+    "body": "Hi, this is a test message! Best wishes.",
+    "to_domains": [
+        "yahoo.com"
     ],
-    "content-type": "text/plain; charset=\"UTF-8\"",
-    "sender": "<s@sender.cibc.com>",
+    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.127 as permitted sender)",
+    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:15:28 +0000",
+    "mime-version": "1.0",
+    "timezone": "+0.0",
     "x-originating-ip": "[24.114.51.127]",
     "received": {
         "SMTP": {
-            "from": {
-                "full_ehlo": "24.114.51.127 EHLO testdomaintest.company",
-                "domain": ""
-            },
+            "from": "24.114.51.127 EHLO testdomaintest.company",
             "by": "10.217.134.205",
             "with": "SMTP",
             "date": "Tue, 24 Nov 2020 04:15:28 +0000",
@@ -339,28 +365,18 @@
             "delay": 0.0
         }
     },
+    "x-ymailisg": "OM5r5a4WLDs79Dbp2480AnesLIhKztxBOSgRBlQolyTmA6qQ\n C0KDgb1kIKud6kwMNsNxYc97uQHkafHc9mg6p8ZHPvauCiECnstnE7dZbF.j\n DHkvcN1FPuSXVoqxaGRQBL4gTd3pHy8wLHS2BhVkGPCn_LNtlbmgTlhLNvPL\n 1TMTvG.HzH7XF3Q6g5TdeVCw473RAxD4VPVCEutOOOJ5pqFz4RtqrLJ5v6Pg\n 5YjEPIqmu8iwcR9Bb7oNr_bMMgWJ1OZD4T7cm37g_oWwmM5mslyP_nsqQN2F\n V89F2dK4Pon_4d4o1.xR5ZbTkb5LEmqQB6.AOEGgS4sAXU9CVjXI68WkX8iU\n 8puNSi3JKD9HLj.cF_9KBrmz.O3eb1TGHC3IDhBaQE5Miz2wgWYHX0ixAbNu\n .GGM8p0bDEoOswPTOE9zhl5S.UA_kgILKYA27e32MrMvHQb2F8hrSp_69JfO\n dsKoA1yt0mOjS2Prc3OG7F95TqztWZoewrRZ0TMG6PfaOWdnoG4iHIxa4t1h\n gpfes9v2A0v4XLZxjOTXgIqw9bdbLZ8Ca6BUwlXv43avB7H4hoD_GWon87qa\n eRTLy9_YKkSkKPs3oFyV_3rzMHTHSWu8Jrl041SeppWsRq9VoQ1NaWgVMp6I\n MHqcG3ShFyBfUcQJRQZD5mDhP2.9wsNbIQ9Cx3PK4OXNUo6eT.9ewNfvuwuo\n 83IHDPBwOXIrK3fV3J0ms7fKyaWuJyFa4R1EXFq.uOf7l0vODUSOdAE5MXs4\n O7h1eqF6ATVQwSZ68LsT2k2ZBjoRG2yJ0_Bl85vsgm3jyFtzqvXLd32SM07p\n 7K1f59jPGpehiMazXyn3.t8bScwRX1U66CFgeqWky19XXXH49Wa5sH_3Rqa6\n qQQZITn81vlc06lu8WA1QE4ECI_znCIEjqL_pJteOy71PENMElcGJxARQAGY\n 02i8zp7SGiZh4JHRo.rCsyJVddM-",
+    "content-type": "text/plain; charset=\"UTF-8\"",
+    "to": [
+        "cis6510victim@yahoo.com"
+    ],
     "subject": "A16: Route portion",
+    "sender": "<s@sender.cibc.com>",
     "from": [
         "",
         "@any.com",
         "security@cibc.com"
     ],
-    "to_domains": [
-        "yahoo.com"
-    ],
-    "authentication-results": {
-        "dkim": {
-            "result": "unknown"
-        },
-        "spf": {
-            "result": "softfail",
-            "info": "smtp.mailfrom=testdomaintest.company"
-        },
-        "dmarc": {
-            "result": "success(p=NONE)",
-            "info": "header.from=cibc.com"
-        }
-    },
     "has_defects": false
 }
 ------------------------------------------------
@@ -368,33 +384,46 @@
 
 ----------------server_a17.txt-------------------------
 {
+    "content-length": "42",
+    "x-email-client": "https://github.com/chenjj/espoofer",
+    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-5RDNW2@message-ids.testdomaintest.company>",
     "return-path": {
         "full_return_path": "any@testdomaintest.company",
         "return_path_wo_route_portion": "any@testdomaintest.company",
         "return_path_domain": "testdomaintest.company"
     },
-    "x-ymailisg": "ahTCQyQWLDuvk1myvnnyoOIsnBlNFAtINRKiFW7NI8eGR1CG\n J6bmenTMl3Fq5ifg39uaHa3K0BsQ1mv.x0JdzWBoF9u5G37tUyCs97FT66P9\n AsvM6hENzcl9VdcHvL1BBNmbCX9Vk_Cc76.h0udPUoIs3463bc9.n72P6iBV\n gnqnbZNiK4dSrMJjPSE0jeVmcjRaqiOLbHqudj234c8nMYG5qu8LY_f0JPk4\n F1FkLN.ZuNo8rZNzvysjS6xT9GuVTHtnVsFmOi2Q5uL9iy5PTQDJF5b1Ja6m\n bUDqUvTyl279x7848gQECVVUdmiz9xsNQ4rPBIdTPtZ3njjOnQLz9MejgRdx\n cofWc12dvzgxLjo.cU9DkKYGs3f5vm2H.09zJHYcy7sK4VySD7FYEkQzPyla\n _Tdx7csFR.V.p9QAAdFAn8yilOBf2Oyi.Gb_nbzyPjlfOuMciPP9rznCtrn8\n KnL9oPkUQDf.wGwuR5eeez.i50UPFzAaWnsfjXcpsab0J4w1WVHk4gXasEDo\n fqZDoHF9fBsBZaWoz7qosR2bp89HkfDk6gvp_iSC3fyT0dtPgxUeR07gdrJu\n saEcT6kGBWBBlQbGOlv64bTHpAK6SJCVnHFrgkR.wqiiRq42Xjrh7FeApvls\n uFY0PXcNc.LRMi0pH3dXS7hX8uvqAYGP6KwfXpO_c5VIDujjA43bWgLtygnI\n gcHYOWC745u9_OriQS70RmA32nuN_pk_EJ59HBpMNWYgwMLXHEchQrB.XX_n\n T5XML6aCiYdiE8Eoeu6F7_cAbbRgpr1kc0DTdAspEIhJlEGyddXe0O1StwIk\n UCcdZwq.mdVHQg1qszOnAghUzangC4jQjh9gw9JFlTzjLaemQQFYzCOOhXjp\n CZdr7ifG15lH6Qe0wfC8jjnuuUHXg_ws1UR31l2sOLGLOJafi49giyjK7vtM\n amo4JP2fyZ5DcElZJ0n5Eiu4r9c-",
-    "mime-version": "1.0",
-    "x-email-client": "https://github.com/chenjj/espoofer",
-    "content-length": "42",
-    "body": "Hi, this is a test message! Best wishes.",
-    "timezone": "+0.0",
-    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:16:27 +0000",
+    "authentication-results": {
+        "dkim": {
+            "result": "unknown"
+        },
+        "spf": {
+            "result": "softfail",
+            "info": {
+                "field": "smtp.mailfrom",
+                "value": "testdomaintest.company"
+            }
+        },
+        "dmarc": {
+            "result": "success(p=NONE)",
+            "info": {
+                "field": "header.from",
+                "value": "cibc.com"
+            }
+        }
+    },
     "date": "2020-11-24T04:16:21",
-    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.127 as permitted sender)",
-    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-5RDNW2@message-ids.testdomaintest.company>",
-    "to": [
-        "cis6510victim@yahoo.com"
+    "body": "Hi, this is a test message! Best wishes.",
+    "to_domains": [
+        "yahoo.com"
     ],
-    "content-type": "text/plain; charset=\"UTF-8\"",
-    "sender": "<s@sender.cibc.com>",
+    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.127 as permitted sender)",
+    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:16:27 +0000",
+    "mime-version": "1.0",
+    "timezone": "+0.0",
     "x-originating-ip": "[24.114.51.127]",
     "received": {
         "SMTP": {
-            "from": {
-                "full_ehlo": "24.114.51.127 EHLO testdomaintest.company",
-                "domain": ""
-            },
+            "from": "24.114.51.127 EHLO testdomaintest.company",
             "by": "10.217.150.12",
             "with": "SMTP",
             "date": "Tue, 24 Nov 2020 04:16:27 +0000",
@@ -412,28 +441,18 @@
             "delay": 0.0
         }
     },
+    "x-ymailisg": "ahTCQyQWLDuvk1myvnnyoOIsnBlNFAtINRKiFW7NI8eGR1CG\n J6bmenTMl3Fq5ifg39uaHa3K0BsQ1mv.x0JdzWBoF9u5G37tUyCs97FT66P9\n AsvM6hENzcl9VdcHvL1BBNmbCX9Vk_Cc76.h0udPUoIs3463bc9.n72P6iBV\n gnqnbZNiK4dSrMJjPSE0jeVmcjRaqiOLbHqudj234c8nMYG5qu8LY_f0JPk4\n F1FkLN.ZuNo8rZNzvysjS6xT9GuVTHtnVsFmOi2Q5uL9iy5PTQDJF5b1Ja6m\n bUDqUvTyl279x7848gQECVVUdmiz9xsNQ4rPBIdTPtZ3njjOnQLz9MejgRdx\n cofWc12dvzgxLjo.cU9DkKYGs3f5vm2H.09zJHYcy7sK4VySD7FYEkQzPyla\n _Tdx7csFR.V.p9QAAdFAn8yilOBf2Oyi.Gb_nbzyPjlfOuMciPP9rznCtrn8\n KnL9oPkUQDf.wGwuR5eeez.i50UPFzAaWnsfjXcpsab0J4w1WVHk4gXasEDo\n fqZDoHF9fBsBZaWoz7qosR2bp89HkfDk6gvp_iSC3fyT0dtPgxUeR07gdrJu\n saEcT6kGBWBBlQbGOlv64bTHpAK6SJCVnHFrgkR.wqiiRq42Xjrh7FeApvls\n uFY0PXcNc.LRMi0pH3dXS7hX8uvqAYGP6KwfXpO_c5VIDujjA43bWgLtygnI\n gcHYOWC745u9_OriQS70RmA32nuN_pk_EJ59HBpMNWYgwMLXHEchQrB.XX_n\n T5XML6aCiYdiE8Eoeu6F7_cAbbRgpr1kc0DTdAspEIhJlEGyddXe0O1StwIk\n UCcdZwq.mdVHQg1qszOnAghUzangC4jQjh9gw9JFlTzjLaemQQFYzCOOhXjp\n CZdr7ifG15lH6Qe0wfC8jjnuuUHXg_ws1UR31l2sOLGLOJafi49giyjK7vtM\n amo4JP2fyZ5DcElZJ0n5Eiu4r9c-",
+    "content-type": "text/plain; charset=\"UTF-8\"",
+    "to": [
+        "cis6510victim@yahoo.com"
+    ],
     "subject": "A17: Quoted pair",
+    "sender": "<s@sender.cibc.com>",
     "from": [
         "security@cibc.com",
         "\\",
         "second@testdomaintest.company"
     ],
-    "to_domains": [
-        "yahoo.com"
-    ],
-    "authentication-results": {
-        "dkim": {
-            "result": "unknown"
-        },
-        "spf": {
-            "result": "softfail",
-            "info": "smtp.mailfrom=testdomaintest.company"
-        },
-        "dmarc": {
-            "result": "success(p=NONE)",
-            "info": "header.from=cibc.com"
-        }
-    },
     "has_defects": false
 }
 ------------------------------------------------
@@ -441,33 +460,46 @@
 
 ----------------server_a18.txt-------------------------
 {
+    "content-length": "42",
+    "x-email-client": "https://github.com/chenjj/espoofer",
+    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-FLIUSA@message-ids.testdomaintest.company>",
     "return-path": {
         "full_return_path": "any@testdomaintest.company",
         "return_path_wo_route_portion": "any@testdomaintest.company",
         "return_path_domain": "testdomaintest.company"
     },
-    "x-ymailisg": "Uf1MQhsWLDvafG6p6Mp36WEqXyVTgaB7ZI7rnoFvc6wB7cJG\n nInqev1GPx_ql8r714b.hrnlvaldI21b7Id7hBQfcrsyIdXmVuuGxkp.0CQN\n 0NCVIgHLltrSXMM49_zwOdl4NgzbVTeT6ykZxvjfBvREuzg6NhKCGOeW0rdk\n rNjaTLtM7f2J4TvlbqKSnCYHqepKOWkUf2sosr3L8FK0izk4vskALKWGvXZK\n JFvZcNA1_EIBUeJ6i9dokQPInkLWYMeY7dWJnUqJ2eEBVkBjpngvdwRAD7rc\n d_v9HifDwjNFTMYXjzpkgmCJKE4fBFaIbBWMKNNQ7fNGo8RtRB_wnBlEgYYr\n hjecemiV089mnYZ0aOXkpRcKFsSLbZYjrBLPjDb3Hq.LK.GqyO0XuShcnn8P\n W.T4XsaChE2gsNuc6RcVTC1EJrg3CoEICSB4c92F4wKs.j1jc22q7jOSTohD\n 4DmU_hhQ0YJnxAzADFU9nWZ49vjW6wxc_AO1trYdbbl0FExaFlp0DKBjixB.\n 5HaGdQ7jmherYlta4QLXt_SR0tV8PJtncMgMtKoFG.X2WkTC_Y71dbTdLr.4\n 9qEOH4BmVmHYoarkA6wcJX14EWzTS4f8jRxGy9slGvAla_NyCdci4pHsVGIz\n Qd5UWKSWXRFysp6uHj7P2w90TsAg9Et4jjM6wA553b7BWUtohkzID6WYPt4x\n sh3GdSoUW6NPO39IyE6o35Pso9Uju6sxdLTZZWwZs6SV0H6pruLRLg0QeAAk\n Er_rjPAsr_7DXrSCv6KuDd_8PtHrLtiHccknKBi3ZM2.JRAJ2uTf.yEuee1e\n goGGFEnjvXidKCbceT74nEg94WGhpCfthQ4iyt8UHm4mnFFscbbRFy0zhFJQ\n bjdTA4Pa81kYQ2ft55cQ0X73BB0coxc4MKkWMGCT3gzQ.sENq89jswoBlWdf\n PTc.EQTigYH0RzWDCxxprtvseSfo971dk4XuSw--",
-    "mime-version": "1.0",
-    "x-email-client": "https://github.com/chenjj/espoofer",
-    "content-length": "42",
-    "body": "Hi, this is a test message! Best wishes.",
-    "timezone": "+0.0",
-    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:16:40 +0000",
+    "authentication-results": {
+        "dkim": {
+            "result": "unknown"
+        },
+        "spf": {
+            "result": "softfail",
+            "info": {
+                "field": "smtp.mailfrom",
+                "value": "testdomaintest.company"
+            }
+        },
+        "dmarc": {
+            "result": "success(p=NONE)",
+            "info": {
+                "field": "header.from",
+                "value": "cibc.com"
+            }
+        }
+    },
     "date": "2020-11-24T04:16:34",
-    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.127 as permitted sender)",
-    "message-id": "<1538085644648.096e3d4e-bc38-4027-b57e-FLIUSA@message-ids.testdomaintest.company>",
-    "to": [
-        "cis6510victim@yahoo.com"
+    "body": "Hi, this is a test message! Best wishes.",
+    "to_domains": [
+        "yahoo.com"
     ],
-    "content-type": "text/plain; charset=\"UTF-8\"",
-    "sender": "<s@sender.cibc.com>",
+    "received-spf": "softfail (domain of transitioningtestdomaintest.company does not designate 24.114.51.127 as permitted sender)",
+    "x-apparently-to": "cis6510victim@yahoo.com; Tue, 24 Nov 2020 04:16:40 +0000",
+    "mime-version": "1.0",
+    "timezone": "+0.0",
     "x-originating-ip": "[24.114.51.127]",
     "received": {
         "SMTP": {
-            "from": {
-                "full_ehlo": "24.114.51.127 EHLO testdomaintest.company",
-                "domain": ""
-            },
+            "from": "24.114.51.127 EHLO testdomaintest.company",
             "by": "10.217.136.93",
             "with": "SMTP",
             "date": "Tue, 24 Nov 2020 04:16:40 +0000",
@@ -485,27 +517,17 @@
             "delay": 0.0
         }
     },
+    "x-ymailisg": "Uf1MQhsWLDvafG6p6Mp36WEqXyVTgaB7ZI7rnoFvc6wB7cJG\n nInqev1GPx_ql8r714b.hrnlvaldI21b7Id7hBQfcrsyIdXmVuuGxkp.0CQN\n 0NCVIgHLltrSXMM49_zwOdl4NgzbVTeT6ykZxvjfBvREuzg6NhKCGOeW0rdk\n rNjaTLtM7f2J4TvlbqKSnCYHqepKOWkUf2sosr3L8FK0izk4vskALKWGvXZK\n JFvZcNA1_EIBUeJ6i9dokQPInkLWYMeY7dWJnUqJ2eEBVkBjpngvdwRAD7rc\n d_v9HifDwjNFTMYXjzpkgmCJKE4fBFaIbBWMKNNQ7fNGo8RtRB_wnBlEgYYr\n hjecemiV089mnYZ0aOXkpRcKFsSLbZYjrBLPjDb3Hq.LK.GqyO0XuShcnn8P\n W.T4XsaChE2gsNuc6RcVTC1EJrg3CoEICSB4c92F4wKs.j1jc22q7jOSTohD\n 4DmU_hhQ0YJnxAzADFU9nWZ49vjW6wxc_AO1trYdbbl0FExaFlp0DKBjixB.\n 5HaGdQ7jmherYlta4QLXt_SR0tV8PJtncMgMtKoFG.X2WkTC_Y71dbTdLr.4\n 9qEOH4BmVmHYoarkA6wcJX14EWzTS4f8jRxGy9slGvAla_NyCdci4pHsVGIz\n Qd5UWKSWXRFysp6uHj7P2w90TsAg9Et4jjM6wA553b7BWUtohkzID6WYPt4x\n sh3GdSoUW6NPO39IyE6o35Pso9Uju6sxdLTZZWwZs6SV0H6pruLRLg0QeAAk\n Er_rjPAsr_7DXrSCv6KuDd_8PtHrLtiHccknKBi3ZM2.JRAJ2uTf.yEuee1e\n goGGFEnjvXidKCbceT74nEg94WGhpCfthQ4iyt8UHm4mnFFscbbRFy0zhFJQ\n bjdTA4Pa81kYQ2ft55cQ0X73BB0coxc4MKkWMGCT3gzQ.sENq89jswoBlWdf\n PTc.EQTigYH0RzWDCxxprtvseSfo971dk4XuSw--",
+    "content-type": "text/plain; charset=\"UTF-8\"",
+    "to": [
+        "cis6510victim@yahoo.com"
+    ],
     "subject": "A18: Specical characters precedence",
+    "sender": "<s@sender.cibc.com>",
     "from": [
         "security@cibc.com",
         "second@testdomaintest.company"
     ],
-    "to_domains": [
-        "yahoo.com"
-    ],
-    "authentication-results": {
-        "dkim": {
-            "result": "unknown"
-        },
-        "spf": {
-            "result": "softfail",
-            "info": "smtp.mailfrom=testdomaintest.company"
-        },
-        "dmarc": {
-            "result": "success(p=NONE)",
-            "info": "header.from=cibc.com"
-        }
-    },
     "has_defects": false
 }
 ------------------------------------------------
