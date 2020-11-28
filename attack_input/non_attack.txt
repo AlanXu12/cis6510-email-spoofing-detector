@@ -1,0 +1,87 @@
+Received: from 10.197.34.76
+ by atlas121.free.mail.bf1.yahoo.com with HTTP; Fri, 27 Nov 2020 02:02:37 +0000
+Return-Path: <gilbert0910@yahoo.com>
+Received: from 74.6.129.82 (EHLO sonic317-27.consmr.mail.bf2.yahoo.com)
+ by 10.197.34.76 with SMTPs; Fri, 27 Nov 2020 02:02:37 +0000
+X-Originating-Ip: [74.6.129.82]
+Received-SPF: pass (domain of yahoo.com designates 74.6.129.82 as permitted sender)
+Authentication-Results: atlas121.free.mail.bf1.yahoo.com;
+ dkim=pass header.i=@yahoo.com header.s=s2048;
+ spf=pass smtp.mailfrom=yahoo.com;
+ dmarc=success(p=REJECT) header.from=yahoo.com;
+X-Apparently-To: cis6510victim@yahoo.com; Fri, 27 Nov 2020 02:02:37 +0000
+X-YMailISG: qiTo5J0WLDs4NOA7Tn.q6_PpiPlEE.9Smeyd6SYe7W0Ryyoo
+ otPSkxIhCG1anETfRZCrIGCcuJlaQpz3xHdlYUdtlXEt7QoC2ei3iu5_n.oX
+ iFcTGj1fB_ueGnX1.P9OL7zNrl1RQGGQ78UwCdoS9aNtChbseHYb6BL8IRZJ
+ fOYR8BL2eJuaqD.xRYHbDh6bE5f_Y5ZAP1YRxf2nRGa0dHKDuMzJqeG_MtGi
+ QidkcqzvDKBrA0DoroYi9qWbV3LyOkXZHa6Ulv_RKMy3Hk4Yst2Iadw_2Fve
+ hz0hbrEZUP.KbeNxm6BTZpRq8GGK9V.y4WRfC5exDx.sb7Su__cYhtyLqT6F
+ 0JHGBxJCYlkarfjofGqqyikvmBNA54flb.hHX2OlzU44exGMGarQddUBNMC3
+ 4438sk3bgAP0VJuTzI97tQ9zkSKYnc2lBot6TjpJ_0q4YYsABDSbUNSmpTKE
+ .bRA7qbCoMUmimGkqBsP1mTZ.gx1R6xG4ve5D3iABWmsrngO3GyD878G7Wfm
+ zsjOKYfd1xlbxvSVBh04C0Pfy0LcXcs4Qf3CAHVDcyqt29ZaLC4gjurUHTU.
+ CsDmIMqW754t49fEfmHv6KYb2oDNQ0ESBeOOuGhTPX1qG0lmUQGVupv17af6
+ jl28__MZj97M0Kbp.4FD_VYq4HIYq.Vq3syBMtTX3AVJ26C3oSqbol_za79b
+ Oj7fsjh0P1MCv9DIfCo1jqoWoigJGTD5SvEH_C8WK_XsDRLG.7q8qzx9FfYI
+ 66utzR2kVqCoy7OmiqA9n5SNmEUjPMLrs.A0R7ecnlCpl.xnB6XUYfAqd7Lk
+ jtO7AX09IclNJHZDX8gArvovfNpJ4aG47v.JI9ilhNB7UdGeKB7_g7cIrBGZ
+ MIlt7tnpeGb7H47FMDFxVEz4Vrh3QgvUR3AN2KeV2bdQEfAdQa2kzbMPUS7y
+ qwKjMzE.nC6I4wuDpbzK5so5B7xLdrVFp2UBYpYLNVmO5FHo6kTYLSBU2o6G
+ R_cAJ40M1VP5rrWsmR.iAXvVJN7UmHLv10emnJKRMoqUU2uvz64cNT5YaXd7
+ 8FelWLf9CdX5z92LsDIz9Go7qsfi
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1606442557; bh=JRBcfYQqA7UZV32RWF9YZPbGm4fvTTBPu5Bp/q5OxEk=; h=Date:From:To:Subject:References:From:Subject; b=PtJVcqA72nQ6smRCSXkdOROFDFfrv9++UGE3V1eRbdUuUSOIe/+iRd/UDCTHVSQyJTR9pNixE/6cIUU3/XkDcAtddH/F2qxd4dWXBF7R3gW3/fmetuPPYw4FjkMbEJCL+cI4As/PCwRICVoMyTAo1r2S5rmnrS41I42PdPnYAIn7ZJPpGh87Fa+U1uEgtAihqfUfcCAXG1id3RlunRJoTYU76BIQNnkEbc/krqmTluAPECsJ0DpP9dmgDDWk7jgCjnB2q27MsGomw2k2sI3J2XQ+Bvw3I1MleIWwZ8FAu1QnzXd7e639noSNfCo9xdNYGAFtUbHZgY13CEuQ0LnetQ==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1606442557; bh=DA/vBxYBs1rLD19fN+Kgv78tS3tJWdC8vauGWwHoFxN=; h=Date:From:To:Subject:From:Subject; b=ZAzO6s0Xva/qzZd8FJydBQIvcAhJlgGEm5ZNE9ROr1KrVA/2TL4dPMsgtpYpruc/aJBOMZAJj7z0MU188Wo6NLNNHh5tg36w5cefq0e3hBUc8EjiMr6Yuqpt7+zFrqD+K9u8aWvVaRhbKD016QuYQTUvNnGH4SRp9RZQinTebt07v+H18hUu1kZZtqLLS8ClzvbLmc27WQETXMSPDLtjiSF6NqJVlekkHDx+ajmBPIsSdv81f4sB1/GC98TYCHZLLaNtiLLiAHCwheFxxjv6aav4sGFIw+4b/EkslWjgw8PPpkfOw8yOyYNY99NV0Pb/kf0kY9PSNvZSh9LsOqWcpw==
+X-YMail-OSG: wzHi880VM1k_fG8_Uy.UbdsvBYFm0KI7EwSc5qUNJLLpLf5LDSq0N5343cQBDDA
+ 1yv7.sPcMaseJUBYeOWCH7CHt.oxZAJ9eXRs1PpJqWlWw95VGqwetqrCKj1IfSu65oUy0NcpAB5c
+ tVZrn5nOPHNNyNqUn9JPzQhRUE_CBR0VfDQ9AMPy.Tf8QeGGiHMDARLrK8P8NF0eBn_7setePGbk
+ pkmLsIgBRaxNE0W_3Jt3M1GjjIDRb7x0qzHToE_niPnkTG8Ko4uxpAE7UfuJT1bZ9MrxAAvvNVEe
+ CI_CG74LLvzsnl7.zn4rPYwCXZwfi7CjVWboaAh5FWbV3dmDZFWNvlqPu_ic1hmSJwoe_mmDa9c9
+ JSeRnNlIPOsIXxrKelrCyIukZrgMrkGTSdCDQmWlFF_JQpYpKmQkt4B9qa59Z1fA5.DRAuSlZXPy
+ YAktzXVl1.2VowdoEQ.D6PkZk0nPHDZml1PF8On1qwlT6XqIXEm0ljIDkj8Hs2_drO177M1yEQiw
+ 22KOkV39IV0izGVUjG8EMZkM_1xTPZze4_GfkX0VDE8Yc0pg1ghtUvyo9NlRmoIAWmsWeVgnUaRr
+ fGhyiRJxp9.jJ9ExJWtCPV20BXmIMvL__eG3fl3tH8Gp4Ehwk6qpyO7tn0cQKpgr9dOzBXg1gT.s
+ O0WDoNwPJZH6S6OKpeqoxwwu3ok_1eTBCSNrh7A44gaQm1WOnko16ZFCFHhw43n2tbvIN9zvb.Te
+ hK5gkVYMAv.4uqHF6nIp9SlI0ZDymNWlCzw7._rf9Eyr6dJNly32gwa1vMVasK7Ubo9AMNJ2qu.H
+ Bz3BHqAuLzxfrQMyRhuF6QMsWvtAGYFuoKn6tLbYiivI1hTE_ZMDyXLgX_.k_cxe1O33YVnTHty9
+ 1pEwnt4pXhcJlfOpJvZvdaZQGAYDUEtA.50RzF4UWpCKbyvontU5rVLeNZzVZRkTZE_3ZF6lUIIb
+ Zay9eRZCN6zLtmpbhYQFprea3Q84DrQoNmnT48.f9NCNYfZZgxBaS9tLue7UtSZ10_A5fqnyQcK4
+ OqUt_o0OZGzUBx38HUoQj_hOKs5pXyrc.gEY16qFGheEXO7vGRgqblE5OWs3N0CBcz25Ou8nMVpJ
+ phq_STsD52IOINkSEM7eYInkEnsCoFRfgsUD_jOv5Jhhze5NOu47cYX23OBKXPK6JFc4FKKhV31l
+ Z1RReQ28PidcNJc.XNfd1Q8xAvTkvo3ZQRmU9rdfxM0jYZUYpEo2Pke0JzapApKoVSGfeqH.vQBq
+ uhyhUe5djrb36YPL6KCZR93BIZrlaQwluYUHrIsoXa7kuu.BI1oFTD5pWIAJ8CFW5j_3EQJDS4j1
+ XB5EAgsZvvPuTIJtBvx7H6TOQsJJ0EHN3iq7jQSeiWInsH.R_kG1Hkx0JiZgwstq3XqXKqAYTYhs
+ 2_0dF_sh9jnzoeOIz5NvAAU98NADL.SpqnNvP0kTBMkwJTagKXo.hcbVNV5PHZ7ckux3qJfd1eSs
+ owt46IQVLWS7u0ONsKc0ZVM3agRVBw_gRDNlCy9QBBYCnIIfNezR6exXTO_0.8DmJwwqYVQeLKLz
+ Mpv9aOnkqzt6ZpHBR29kmpvYTEyjl.iTrAuTeGLo1dACffeV4lZ9cTeFlbQ9bazg1HIr1uixiMr4
+ khH3SHhS6psW2Xuk64EHD3yhI85FjfuccrLEgAgvIoY0Z3qsv_uZ.F.rLeVWkKhUGI60tb_5RT1a
+ 1ade86TxEXq9XQp_sZc71ZEF83fiy.QIfoGauUz6_V3gD8DI9npdm1KRWOPEQOh5r4AWpRzEyI..
+ vQuWTILLEijeAfkxz.NkFPCCA3EiN1.DsnNMO5WTcG9XXOkA1TV6aAPFZdMJWl.qN3sWu2pzWgVF
+ NFPoqFD4WyMVYbK1Uv5ag7Xlw3aYYLsHN.9fOKSCRHd0OX8TEv2UTpvASXl__0y0bfJl57QTIUt1
+ JrM.U.WcCdjIw877CqD5EZH2jIKG1wVPQD7M03WFtph5pbpCFyrhPBo8WzDl0XYZQSTk0nSB.VTB
+ QohzAF6BtrSBsdVhir5Kaur0icohtsnbDxD3scJ4ZHsev1.qZGXcOiTuKNcSjlPvgP6C5.YxfMgd
+ FLy1kCkEoKHee7HdkrBN8f_ZiUKdzWEvPnb6dCnLHOwmLz_.8bO0LEUEnA_HOIgx7qCXo9Ymk2Nf
+ JrIRQxoNpcbbO
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic317.consmr.mail.bf2.yahoo.com with HTTP; Fri, 27 Nov 2020 02:02:37 +0000
+Date: Fri, 27 Nov 2020 02:02:35 +0000 (UTC)
+From: Yiwei Guo <gilbert0910@yahoo.com>
+To: "cis6510victim@yahoo.com" <cis6510victim@yahoo.com>
+Message-ID: <1591823801.456734.1606442555329@mail.yahoo.com>
+Subject: Test msg
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_456733_2089371975.1606442555328"
+References: <1591823801.456734.1606442555329.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.17111 YMailNorrin Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36
+Content-Length: 511
+
+------=_Part_456733_2089371975.1606442555328
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+This is a test.
+------=_Part_456733_2089371975.1606442555328
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html><head></head><body><div class="yahoo-style-wrap" style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px;"><div dir="ltr" data-setdir="false">This is a test.</div></div></body></html>
+------=_Part_456733_2089371975.1606442555328--
