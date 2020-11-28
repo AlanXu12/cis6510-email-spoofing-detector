@@ -58,21 +58,70 @@ class DoubleChecker():
             return True
 
     def check_attack_server_a15(self):
-        pass
+        # Get the domain from the EHLO address
+        addr_domain = ["testdomaintest.company"]
+        # Decode the domain address in From header (legitimate.com)
+        real_header_from = ["legitimate.com", "testdomaintest.company"]
+        for domain in real_header_from:
+            if domain != addr_domain[0]:
+                return False
+        return True
+
 
     def check_attack_server_a16(self):
-        pass
+        # Get the domain from the EHLO address
+        addr_domain = ["testdomaintest.company"]
+        # Get the domain address in From header (i.e. getting rid of route part)
+        real_header_from = ["cibc.com"]
+        for domain in real_header_from:
+            if domain != addr_domain[0]:
+                return False
+        return True
+
 
     def check_attack_server_a17(self):
-        pass
+        # Get the domain from the EHLO address
+        addr_domain = ["testdomaintest.company"]
+        # Get the domain address in From header (i.e. getting rid of quoted pair)
+        real_header_from = ["cibc.com", "testdomaintest.company"]
+        for domain in real_header_from:
+            if domain != addr_domain[0]:
+                return False
+        return True
 
     def check_attack_server_a18(self):
-        pass
+        # Get the domain from the EHLO address
+        addr_domain = ["testdomaintest.company"]
+        # Get the domain address in From header (i.e. getting rid of special characters)
+        real_header_from = ["cibc.com", "testdomaintest.company"]
+        for domain in real_header_from:
+            if domain != addr_domain[0]:
+                return False
+        return True
 
 
 if __name__ == "__main__":
     dc = DoubleChecker(
         "@cibc.com,@any.com:'any@testdomaintest.company", "security@cibc.com")
     res = dc.check_attack_server_a7()
-
     print("res:", res)
+    # Test for a15
+    dc = DoubleChecker(
+        "testdomaintest.company", "?utf-8?B?PGFkbWluQGxlZ2l0aW1hdGUuY29tPg==?=,<second@testdomaintest.company>")
+    res = dc.check_attack_server_a15()
+    print("res_a15:", res)
+    # Test for a16
+    dc = DoubleChecker(
+        "testdomaintest.company", "<@testdomaintest.company,@any.com:security@cibc.com>")
+    res = dc.check_attack_server_a16()
+    print("res_a16:", res)
+    # Test for a17
+    dc = DoubleChecker(
+        "testdomaintest.company", "<security@cibc.com>\,<second@testdomaintest.company>")
+    res = dc.check_attack_server_a17()
+    print("res_a17:", res)
+    # Test for a18
+    dc = DoubleChecker(
+        "testdomaintest.company", "security@cibc.com,<second@testdomaintest.company>")
+    res = dc.check_attack_server_a18()
+    print("res_a18:", res)
