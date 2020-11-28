@@ -7,6 +7,9 @@ class RawEmailParser():
 
     REGEX_EMAIL_CHECKER_TEMPLATE = "(?<={}=)(.*)(?=;)"
     REGEX_HELO_DOMAIN = "(?<=helo.)(.*)$"
+    REGEX_FULL_RETURN_PATH = "(?<=<)(.*)(?=>)"
+    REGEX_RETURN_PATH_WITHOUT_ROUTE_PORTION = "(?<=:)(.*)(?=>)"
+    REGEX_RETURN_PATH_DOMAIN = "(?<=@)(.*)$"
 
     def __init__(self, input_file_path):
         self.input_file_path = input_file_path
@@ -44,9 +47,15 @@ class RawEmailParser():
         parsed_mail_final["received"] = self.__modify_received(
             parsed_mail_init["received"])
 
+        # Modify Return Path
+        parsed_mail_final["return-path"] = self.__modify_return_path(
+            parsed_mail_init["return-path"])
+
         return parsed_mail_final
 
     def __modify_auth_res(self, auth_res_org):
+        # Countermeasure for mailparser's false parsing of server_a15
+        auth_res_org = auth_res_org.replace("; ", "; \n")
         # Get testing result records for DKIM, SPF, and DMARC
         dkim_res = self.__match_regex(
             self.REGEX_EMAIL_CHECKER_TEMPLATE.format("dkim"), auth_res_org)
@@ -61,17 +70,32 @@ class RawEmailParser():
             dkim_res_lst = dkim_res.split(" ")
             auth_res_updated["dkim"]["result"] = dkim_res_lst[0]
             if len(dkim_res_lst) == 2:
-                auth_res_updated["dkim"]["info"] = dkim_res_lst[1]
+                dkim_res_info_lst = dkim_res_lst[1].split("=")
+                dkim_res_info = {
+                    "field": dkim_res_info_lst[0],
+                    "value": dkim_res_info_lst[1]
+                }
+                auth_res_updated["dkim"]["info"] = dkim_res_info
         if spf_res:
             spf_res_lst = spf_res.split(" ")
             auth_res_updated["spf"]["result"] = spf_res_lst[0]
             if len(spf_res_lst) == 2:
-                auth_res_updated["spf"]["info"] = spf_res_lst[1]
+                spf_res_info_lst = spf_res_lst[1].split("=")
+                spf_res_info = {
+                    "field": spf_res_info_lst[0],
+                    "value": spf_res_info_lst[1]
+                }
+                auth_res_updated["spf"]["info"] = spf_res_info
         if dmarc_res:
             dmarc_res_lst = dmarc_res.split(" ")
             auth_res_updated["dmarc"]["result"] = dmarc_res_lst[0]
             if len(dmarc_res_lst) == 2:
-                auth_res_updated["dmarc"]["info"] = dmarc_res_lst[1]
+                dmarc_res_info_lst = dmarc_res_lst[1].split("=")
+                dmarc_res_info = {
+                    "field": dmarc_res_info_lst[0],
+                    "value": dmarc_res_info_lst[1]
+                }
+                auth_res_updated["dmarc"]["info"] = dmarc_res_info
 
         return auth_res_updated
 
@@ -96,19 +120,33 @@ class RawEmailParser():
         for next_received in received_org:
             # SMTP is the received record for HELO
             if next_received["with"] == "SMTP":
-                next_received_final = next_received.copy()
-                next_received_final["from"] = dict()
-                full_ehlo_org = next_received["from"]
-                ehlo_domain = self.__match_regex(
-                    self.REGEX_HELO_DOMAIN, next_received["from"])
-                next_received_final["from"]["full_ehlo"] = full_ehlo_org
-                next_received_final["from"]["domain"] = ehlo_domain
-                received_final["SMTP"] = next_received_final
+                received_final["SMTP"] = next_received
             # HTTP is the received record for fetching the email
             # from Yahoo receiving server
             elif next_received["with"] == "HTTP":
                 received_final["HTTP"] = next_received
         return received_final
+
+    def __modify_return_path(self, return_path_org):
+        full_return_path = self.__match_regex(
+            self.REGEX_FULL_RETURN_PATH, return_path_org)
+        return_path_without_route_portion = self.__match_regex(
+            self.REGEX_RETURN_PATH_WITHOUT_ROUTE_PORTION, return_path_org)
+        # In case return path has route portion, find the real address
+        if return_path_without_route_portion == "":
+            return_path_without_route_portion = full_return_path
+            return_path_domain = self.__match_regex(
+                self.REGEX_RETURN_PATH_DOMAIN,
+                return_path_without_route_portion)
+        else:
+            return_path_domain = self.__match_regex(
+                self.REGEX_RETURN_PATH_DOMAIN,
+                return_path_without_route_portion)
+        return_path_final = dict()
+        return_path_final["full_return_path"] = full_return_path
+        return_path_final["return_path_wo_route_portion"] = return_path_without_route_portion
+        return_path_final["return_path_domain"] = return_path_domain
+        return return_path_final
 
 
 if __name__ == "__main__":
@@ -131,3 +169,10 @@ if __name__ == "__main__":
     # print(type(mail.mail_json))
     # print(parsed_mail)
     # print(type(parsed_mail))
+
+    # fn = "server_a{}.txt".format(str(15))
+    # rep = RawEmailParser("./attack_input/" + fn)
+    # rep_res = rep.parse()
+    # fn = "server_a{}.txt".format(str(16))
+    # rep = RawEmailParser("./attack_input/" + fn)
+    # rep_res = rep.parse()
