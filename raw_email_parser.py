@@ -7,6 +7,9 @@ class RawEmailParser():
 
     REGEX_EMAIL_CHECKER_TEMPLATE = "(?<={}=)(.*)(?=;)"
     REGEX_HELO_DOMAIN = "(?<=helo.)(.*)$"
+    REGEX_FULL_RETURN_PATH = "(?<=<)(.*)(?=>)"
+    REGEX_RETURN_PATH_WITHOUT_ROUTE_PORTION = "(?<=:)(.*)(?=>)"
+    REGEX_RETURN_PATH_DOMAIN = "(?<=@)(.*)$"
 
     def __init__(self, input_file_path):
         self.input_file_path = input_file_path
@@ -43,6 +46,10 @@ class RawEmailParser():
         # Modify Received
         parsed_mail_final["received"] = self.__modify_received(
             parsed_mail_init["received"])
+
+        # Modify Return Path
+        parsed_mail_final["return-path"] = self.__modify_return_path(
+            parsed_mail_init["return-path"])
 
         return parsed_mail_final
 
@@ -109,6 +116,27 @@ class RawEmailParser():
             elif next_received["with"] == "HTTP":
                 received_final["HTTP"] = next_received
         return received_final
+
+    def __modify_return_path(self, return_path_org):
+        full_return_path = self.__match_regex(
+            self.REGEX_FULL_RETURN_PATH, return_path_org)
+        return_path_without_route_portion = self.__match_regex(
+            self.REGEX_RETURN_PATH_WITHOUT_ROUTE_PORTION, return_path_org)
+        # In case return path has route portion, find the real address
+        if return_path_without_route_portion == "":
+            return_path_without_route_portion = full_return_path
+            return_path_domain = self.__match_regex(
+                self.REGEX_RETURN_PATH_DOMAIN,
+                return_path_without_route_portion)
+        else:
+            return_path_domain = self.__match_regex(
+                self.REGEX_RETURN_PATH_DOMAIN,
+                return_path_without_route_portion)
+        return_path_final = dict()
+        return_path_final["full_return_path"] = full_return_path
+        return_path_final["return_path_wo_route_portion"] = return_path_without_route_portion
+        return_path_final["return_path_domain"] = return_path_domain
+        return return_path_final
 
 
 if __name__ == "__main__":
