@@ -10,7 +10,7 @@ class RawEmailParser():
     REGEX_FULL_RETURN_PATH = "(?<=<)(.*)(?=>)"
     REGEX_RETURN_PATH_WITHOUT_ROUTE_PORTION = "(?<=:)(.*)(?=>)"
     REGEX_RETURN_PATH_DOMAIN = "(?<=@)(.*)$"
-    REGEX_HEADER_FROM = "(?<=From: )(.*)$"
+    REGEX_HEADER_FROM = "(?<=From:)(.*)$"
 
     def __init__(self, input_file_path):
         self.input_file_path = input_file_path
@@ -107,10 +107,9 @@ class RawEmailParser():
         with open(self.input_file_path) as input_file:
             next_line = input_file.readline()
             while next_line != "":
-                header_from_res = self.__match_regex(
-                    self.REGEX_HEADER_FROM, next_line)
-                if header_from_res != "":
-                    header_from_final = header_from_res
+                if next_line.startswith("From:"):
+                    header_from_final = self.__match_regex(
+                        self.REGEX_HEADER_FROM, next_line)
                     break
                 next_line = input_file.readline()
         input_file.close()
@@ -180,8 +179,7 @@ if __name__ == "__main__":
     # print(type(parsed_mail))
 
     # fn = "server_a{}.txt".format(str(15))
+    # fn = "non_attack.txt"
     # rep = RawEmailParser("./attack_input/" + fn)
     # rep_res = rep.parse()
-    # fn = "server_a{}.txt".format(str(16))
-    # rep = RawEmailParser("./attack_input/" + fn)
-    # rep_res = rep.parse()
+    # print(rep_res)
