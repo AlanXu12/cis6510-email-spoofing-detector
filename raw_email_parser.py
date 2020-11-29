@@ -10,6 +10,7 @@ class RawEmailParser():
     REGEX_FULL_RETURN_PATH = "(?<=<)(.*)(?=>)"
     REGEX_RETURN_PATH_WITHOUT_ROUTE_PORTION = "(?<=:)(.*)(?=>)"
     REGEX_RETURN_PATH_DOMAIN = "(?<=@)(.*)$"
+    REGEX_HEADER_FROM = "(?<=From: )(.*)$"
 
     def __init__(self, input_file_path):
         self.input_file_path = input_file_path
@@ -36,8 +37,7 @@ class RawEmailParser():
             parsed_mail_init["authentication-results"])
 
         # Modify From in header
-        parsed_mail_final["from"] = self.__modify_header_from(
-            parsed_mail_init["from"])
+        parsed_mail_final["from"] = self.__modify_header_from()
 
         # Modify To in header
         parsed_mail_final["to"] = self.__modify_header_to(
@@ -102,12 +102,18 @@ class RawEmailParser():
 
         return auth_res_updated
 
-    def __modify_header_from(self, header_from_org):
-        header_from_final = []
-        # Simply destroy the outter list for each record is
-        # sufficient for re-formating
-        for next_from in header_from_org:
-            header_from_final.append(next_from[1])
+    def __modify_header_from(self):
+        header_from_final = ""
+        with open(self.input_file_path) as input_file:
+            next_line = input_file.readline()
+            while next_line != "":
+                header_from_res = self.__match_regex(
+                    self.REGEX_HEADER_FROM, next_line)
+                if header_from_res != "":
+                    header_from_final = header_from_res
+                    break
+                next_line = input_file.readline()
+        input_file.close()
         return header_from_final
 
     def __modify_header_to(self, header_to_org):
