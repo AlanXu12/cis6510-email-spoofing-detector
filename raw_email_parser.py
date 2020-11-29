@@ -10,7 +10,7 @@ class RawEmailParser():
     REGEX_FULL_RETURN_PATH = "(?<=<)(.*)(?=>)"
     REGEX_RETURN_PATH_WITHOUT_ROUTE_PORTION = "(?<=:)(.*)(?=>)"
     REGEX_RETURN_PATH_DOMAIN = "(?<=@)(.*)$"
-    REGEX_HEADER_FROM = "(?<=From: )(.*)$"
+    REGEX_HEADER_FROM = "(?<=From:)(.*)$"
 
     def __init__(self, input_file_path):
         self.input_file_path = input_file_path
