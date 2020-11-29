@@ -51,6 +51,9 @@ class RawEmailParser():
         parsed_mail_final["return-path"] = self.__modify_return_path(
             parsed_mail_init["return-path"])
 
+        # Modify has_defects (simply remove to avoid Python converting error)
+        del parsed_mail_final["has_defects"]
+
         return parsed_mail_final
 
     def __modify_auth_res(self, auth_res_org):
