@@ -6,8 +6,8 @@ Received: from 74.6.129.82 (EHLO sonic317-27.consmr.mail.bf2.yahoo.com)
 X-Originating-Ip: [74.6.129.82]
 Received-SPF: pass (domain of yahoo.com designates 74.6.129.82 as permitted sender)
 Authentication-Results: atlas121.free.mail.bf1.yahoo.com;
- dkim=unknown header.i=@yahoo.com header.s=s2048;
- spf=none smtp.mailfrom=yahoo.com;
+ dkim=pass header.i=@yahoo.com header.s=s2048;
+ spf=pass smtp.mailfrom=yahoo.com;
  dmarc=success(p=REJECT) header.from=yahoo.com;
 X-Apparently-To: cis6510victim@yahoo.com; Fri, 27 Nov 2020 02:02:37 +0000
 X-YMailISG: qiTo5J0WLDs4NOA7Tn.q6_PpiPlEE.9Smeyd6SYe7W0Ryyoo
