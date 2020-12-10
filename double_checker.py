@@ -9,6 +9,9 @@ class DoubleChecker():
     REGEX_EVERYTHING_BETWEEN_CHEVRON = "\<(.*?)\>"
     REGEX_EVERY_EMAIL_ADDRESS = "([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)"
     REGEX_EVERYTHING_UTF_8 = "(?<==\?utf-8\?B\?)(.*)(?=\?=)"
+    
+    NON_SUSPECIOUS_MSG = "Not a suspecious email."
+    SUSPECIOUS_MSG_TMP = "This email is detected to be suspecious for:\n\t- Attack server_a{} in espoofer attacking tool\n\t- i.e. Attack A{} in the paper"
 
     def __init__(self, parsed_file):
         """
@@ -37,10 +40,10 @@ class DoubleChecker():
                     self.REGEX_EVERYTHING_AFTER_AT, address)
                 # If there is a domain, check if the domain is the same as it in smtp
                 if len(domain) == 0 or domain[0] != self.smtp_mail_from:
-                    return False
+                    return self.SUSPECIOUS_MSG_TMP.format("1", "1")
         else:
-            return False
-        return True
+            return self.SUSPECIOUS_MSG_TMP.format("1", "1")
+        return self.NON_SUSPECIOUS_MSG
 
     def check_attack_server_a4(self):
         # Filter all the email address in from header
@@ -55,10 +58,10 @@ class DoubleChecker():
                     self.REGEX_EVERYTHING_AFTER_AT, address)
                 # If there is a domain, check if the domain is the same as it in smtp
                 if len(domain) == 0 or domain[0] != self.smtp_mail_from:
-                    return False
+                    return self.SUSPECIOUS_MSG_TMP.format("4", "4")
         else:
-            return False
-        return True
+            return self.SUSPECIOUS_MSG_TMP.format("4", "4")
+        return self.NON_SUSPECIOUS_MSG
 
     def check_attack_server_a7(self):
         # Filter all the email address in from header
@@ -73,10 +76,10 @@ class DoubleChecker():
                     self.REGEX_EVERYTHING_AFTER_AT, address)
                 # If there is a domain, check if the domain is the same as it in return path without route portion
                 if len(domain) == 0 or domain[0] != self.return_path_domain:
-                    return False
+                    return self.SUSPECIOUS_MSG_TMP.format("7", "5")
         else:
-            return False
-        return True
+            return self.SUSPECIOUS_MSG_TMP.format("7", "5")
+        return self.NON_SUSPECIOUS_MSG
 
     def check_attack_server_a15(self):
         # Filter all the email address within <> in from header
@@ -101,10 +104,10 @@ class DoubleChecker():
                     self.REGEX_EVERYTHING_AFTER_AT, address)
                 # If there is a domain, check if the domain is the same as it in smtp
                 if len(domain) == 0 or domain[0] != self.smtp_mail_from:
-                    return False
+                    return self.SUSPECIOUS_MSG_TMP.format("15", "10")
         else:
-            return False
-        return True
+            return self.SUSPECIOUS_MSG_TMP.format("15", "10")
+        return self.NON_SUSPECIOUS_MSG
 
 
     def check_attack_server_a16(self):
@@ -123,10 +126,10 @@ class DoubleChecker():
                     self.REGEX_EVERYTHING_AFTER_AT, address)
                 # If there is a domain, check if the domain is the same as it in smtp
                 if len(domain) == 0 or domain[0] != self.smtp_mail_from:
-                    return False
+                    return self.SUSPECIOUS_MSG_TMP.format("16", "11")
         else:
-            return False
-        return True
+            return self.SUSPECIOUS_MSG_TMP.format("16", "11")
+        return self.NON_SUSPECIOUS_MSG
 
 
     def check_attack_server_a17(self):
@@ -142,10 +145,10 @@ class DoubleChecker():
                     self.REGEX_EVERYTHING_AFTER_AT, address)
                 # If there is a domain, check if the domain is the same as it in smtp
                 if len(domain) == 0 or domain[0] != self.smtp_mail_from:
-                    return False
+                    return self.SUSPECIOUS_MSG_TMP.format("17", "12")
         else:
-            return False
-        return True
+            return self.SUSPECIOUS_MSG_TMP.format("17", "12")
+        return self.NON_SUSPECIOUS_MSG
 
     def check_attack_server_a18(self):
         # Filter all the email address in from header
@@ -160,10 +163,10 @@ class DoubleChecker():
                     self.REGEX_EVERYTHING_AFTER_AT, address)
                 # If there is a domain, check if the domain is the same as it in smtp
                 if len(domain) == 0 or domain[0] != self.smtp_mail_from:
-                    return False
+                    return self.SUSPECIOUS_MSG_TMP.format("18", "13")
         else:
-            return False
-        return True
+            return self.SUSPECIOUS_MSG_TMP.format("18", "13")
+        return self.NON_SUSPECIOUS_MSG
 
 
 if __name__ == "__main__":
