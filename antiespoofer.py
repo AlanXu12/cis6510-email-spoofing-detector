@@ -68,4 +68,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     input_file = args.input
     double_check_res = anti_espoofer_check(input_file)
-    print("Double check result: {}".format(str(double_check_res)))
+    print("Raw email file: \n\t{} \nDouble check result: \n\t{}".format(input_file, double_check_res))
