@@ -155,31 +155,3 @@ class RawEmailParser():
         return_path_final["return_path_wo_route_portion"] = return_path_without_route_portion
         return_path_final["return_path_domain"] = return_path_domain
         return return_path_final
-
-
-if __name__ == "__main__":
-    for i in [1, 4, 7, 15, 16, 17, 18]:
-        fn = "server_a{}.txt".format(str(i))
-        rep = RawEmailParser("./attack_input/" + fn)
-        rep_res = rep.parse()
-        print("\n----------------" + fn + "-------------------------")
-        print(json.dumps(rep_res, indent=4))
-        print("------------------------------------------------\n")
-
-    # file_path = "./attack_input/server_a15.txt"
-    # mail = mailparser.parse_from_file(file_path)
-    # parsed_mail_str = mail.mail_json
-    # parsed_mail = json.loads(parsed_mail_str)
-
-    # print(mail.body)
-    # print(mail.date)
-    # print(mail.mail_json)
-    # print(type(mail.mail_json))
-    # print(parsed_mail)
-    # print(type(parsed_mail))
-
-    # fn = "server_a{}.txt".format(str(15))
-    # fn = "non_attack.txt"
-    # rep = RawEmailParser("./attack_input/" + fn)
-    # rep_res = rep.parse()
-    # print(rep_res)

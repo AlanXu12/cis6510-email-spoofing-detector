@@ -11,23 +11,19 @@ def anti_espoofer_check(input_file):
     spf_res = rep_res["authentication-results"]["spf"]["result"]
     dmarc_res = rep_res["authentication-results"]["dmarc"]["result"]
 
-    # print("dkim_res:", dkim_res)
-    # print("spf_res:", spf_res)
-    # print("dmarc_res:", dmarc_res)
-
     res = None
     # server_a1
     if dkim_res == "unknown" and spf_res == "none" and "success" in dmarc_res:
         res = dc.check_attack_server_a1()
     # server_a4
-    elif (dkim_res == "perm_fail" and spf_res == "softfail" and
+    elif (dkim_res == "perm_fail" and (spf_res == "pass" or spf_res == "softfail") and
           "success" in dmarc_res):
         res = dc.check_attack_server_a4()
     # server_a15
-    elif (dkim_res == "unknown" and spf_res == "softfail" and
+    elif (dkim_res == "unknown" and (spf_res == "pass" or spf_res == "softfail") and
           dmarc_res == "unknown"):
         res = dc.check_attack_server_a15()
-    elif (dkim_res == "unknown" and spf_res == "softfail" and
+    elif (dkim_res == "unknown" and (spf_res == "pass" or spf_res == "softfail") and
           "success" in dmarc_res):
         # Having route portion in Return Path of parsing result
         has_route_in_rp = rep_res["return-path"]["full_return_path"] != rep_res["return-path"]["return_path_wo_route_portion"]
@@ -49,6 +45,8 @@ def anti_espoofer_check(input_file):
         # server_a18
         elif not starts_with_less_than_hf:
             res = dc.check_attack_server_a18()
+    else:
+        res = "This email may not be spoofed / The attacking type is not in Anti-Espoofer's scope"
     return res
 
 
