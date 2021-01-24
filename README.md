@@ -5,7 +5,7 @@ Research Project For The Detections Of Potential Email Spoofing Attacks Mentione
 1. __Research Project Final Writeup__:   
 https://github.com/AlanXu12/cis6510-email-spoofing-detector/blob/main/CIS6510_Project_Writeup_Pingfan_Xu_Yiwei_Guo.pdf
 
-3. __Project Presentation Video__:  
+2. __Project Presentation Video__:  
 https://youtu.be/Metf47dweEc
 
 3. __Project Description__:  
