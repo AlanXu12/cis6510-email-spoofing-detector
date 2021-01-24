@@ -1,4 +1,4 @@
-# cis6510-email-spoofing-detector
+# UoGuelph CIS6510 Course Project
 
 Research Project For The Detections Of Potential Email Spoofing Attacks Mentioned in [Composition Kills: A Case Study of Email Sender Authentication](https://www.usenix.org/conference/usenixsecurity20/presentation/chen-jianjun)
 
