@@ -2,7 +2,7 @@
 
 Research Project For The Detections Of Potential Email Spoofing Attacks Mentioned in [Composition Kills: A Case Study of Email Sender Authentication](https://www.usenix.org/conference/usenixsecurity20/presentation/chen-jianjun)
 
-1. __Research Project Final Writeup__: 
+1. __Research Project Final Writeup__:   
 https://github.com/AlanXu12/cis6510-email-spoofing-detector/blob/main/CIS6510_Project_Writeup_Pingfan_Xu_Yiwei_Guo.pdf
 
 2. __Project Description__:  
